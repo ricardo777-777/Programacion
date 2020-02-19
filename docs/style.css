@@ -15,7 +15,7 @@ pre code {
 
 h1, h2, h3, h4, h5 { font-family: serif;
                      font-weight: 900;
-                     border-bottom: 1px dotted black;
+                     border-bottom: 1px dotted green;
                      color:  #299882; }
 
 .book .book-body .page-wrapper .page-inner section.normal h1{font-size:1em}
