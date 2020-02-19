@@ -1,1 +1,50 @@
+\usepackage[scaled=0.92]{helvet}
+
+\renewcommand{\rmdefault}{ptm}
+%\usepackage{times}		
+\usepackage{amsmath}		
+\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
 \usepackage{booktabs}
+\usepackage{enumitem}
+
+
+
+\usepackage{titlesec}
+\newcommand{\ww}{0.015em}
+\titlespacing*{\chapter}
+{0pt} {5em plus \ww minus \ww} {0em plus \ww minus \ww}
+\titlespacing*{\section}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsubsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\paragraph} {0pt}{1.25ex plus 1ex minus .2ex}{2em}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\setlength{\parskip}{0.5em plus \ww minus \ww}
+
+\titleformat{\chapter}[display]
+{\normalfont\normalsize\bfseries\centering}{Capítulo \thechapter}{0.0em}{\normalsize\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xpatch}%space equation
+\xapptocmd\normalsize{%
+	\abovedisplayskip=0.5em plus \ww minus \ww
+	\abovedisplayshortskip=0.5em plus \ww minus \ww
+	\belowdisplayskip=0.5em plus \ww minus \ww
+	\belowdisplayshortskip=0.5em plus \ww minus \ww
+}{}{}
+%%%%%%%%%%%%%%%%%%%%%
+%\setlength\intextsep{0.5em}% plus \ww minus \ww}
+\setlist{topsep=0em plus \ww minus \ww, parsep=0.5em plus \ww minus \ww, itemsep=0em} 
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.5}
+\renewcommand{\floatpagefraction}{0.7}
+
+

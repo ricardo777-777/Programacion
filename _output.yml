@@ -2,11 +2,13 @@ bookdown::gitbook:
   css: style.css
   config:
     fontsettings:
-      theme: sepia
+      theme: white
       size: 2
       family: serif
     toc:
-    download: ["pdf", "epub", "word"]
+      collapse: section
+      scroll_highlight: yes
+    download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

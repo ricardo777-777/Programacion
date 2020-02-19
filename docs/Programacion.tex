@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{book}
+\documentclass[12pt,]{report}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -29,8 +29,8 @@
 }
 \usepackage{hyperref}
 \hypersetup{
-            pdftitle={A Minimal Book Example},
-            pdfauthor={Yihui Xie},
+            pdftitle={Resumenes},
+            pdfauthor={MALLQUI BAÑOS Ricardo Michel},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -90,15 +90,6 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
 
 % set default figure placement to htbp
 \makeatletter
@@ -111,7 +102,54 @@
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
+\usepackage[scaled=0.92]{helvet}
+
+\renewcommand{\rmdefault}{ptm}
+%\usepackage{times}		
+\usepackage{amsmath}		
+\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
 \usepackage{booktabs}
+\usepackage{enumitem}
+
+
+
+\usepackage{titlesec}
+\newcommand{\ww}{0.015em}
+\titlespacing*{\chapter}
+{0pt} {5em plus \ww minus \ww} {0em plus \ww minus \ww}
+\titlespacing*{\section}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsubsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\paragraph} {0pt}{1.25ex plus 1ex minus .2ex}{2em}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\setlength{\parskip}{0.5em plus \ww minus \ww}
+
+\titleformat{\chapter}[display]
+{\normalfont\normalsize\bfseries\centering}{Capítulo \thechapter}{0.0em}{\normalsize\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xpatch}%space equation
+\xapptocmd\normalsize{%
+	\abovedisplayskip=0.5em plus \ww minus \ww
+	\abovedisplayshortskip=0.5em plus \ww minus \ww
+	\belowdisplayskip=0.5em plus \ww minus \ww
+	\belowdisplayshortskip=0.5em plus \ww minus \ww
+}{}{}
+%%%%%%%%%%%%%%%%%%%%%
+%\setlength\intextsep{0.5em}% plus \ww minus \ww}
+\setlist{topsep=0em plus \ww minus \ww, parsep=0.5em plus \ww minus \ww, itemsep=0em} 
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.5}
+\renewcommand{\floatpagefraction}{0.7}
 % https://github.com/rstudio/rmarkdown/issues/337
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
@@ -131,8 +169,8 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{A Minimal Book Example}
-\author{Yihui Xie}
+\title{Resumenes}
+\author{MALLQUI BAÑOS Ricardo Michel}
 \date{2020-02-18}
 
 \begin{document}
@@ -145,7 +183,29 @@
 \hypertarget{prerequisites}{%
 \chapter{Prerequisites}\label{prerequisites}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+\hypertarget{datos}{%
+\section{Datos}\label{datos}}
+
+Sean los datos que se prosiguen
+
+\begin{itemize}
+\tightlist
+\item
+  www
+\item
+  wwwww
+\end{itemize}
+
+\hypertarget{ff}{%
+\subsection{ff}\label{ff}}
+
+WWWW fff
+WWWW wwwww
+
+\hypertarget{ff-1}{%
+\subsection{ff}\label{ff-1}}
+
+This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2_c\).
 
 The \textbf{bookdown} package can be installed from CRAN or Github:
 
@@ -157,16 +217,21 @@ The \textbf{bookdown} package can be installed from CRAN or Github:
 \end{Highlighting}
 \end{Shaded}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading .
 
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+
+\hypertarget{acciones}{%
+\section{Acciones}\label{acciones}}
+
+Sean los datos \emph{emph} \textbf{\emph{real}} \textbf{Entonces}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+You can label chapter and section titles using after them, e.g., we can reference Chapter \ref{literature}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+Figures and tables with captions will be placed in and environments, respectively.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -184,7 +249,7 @@ Figures and tables with captions will be placed in \texttt{figure} and \texttt{t
 \caption{Here is a nice figure!}\label{fig:nice-fig}
 \end{figure}
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+Reference a figure by its code chunk label with the prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
