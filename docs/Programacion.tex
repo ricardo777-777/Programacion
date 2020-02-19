@@ -155,6 +155,31 @@
 \renewcommand{\bottomfraction}{0.85}
 \renewcommand{\textfraction}{0.5}
 \renewcommand{\floatpagefraction}{0.7}
+
+
+
+\newcommand{\N}{\mathds{N}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\CC}{\mathds{C}}
+\newcommand{\I}{\mathds{I}}
+\newcommand{\f}{\mathds{f}}
+\newcommand{\X}{\mathds{X}}
+\newcommand{\D}{\mathds{D}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\Q}{\mathds{Q}}
+
+\newcommand{\Ee}{\mathcal{E}}
+\newcommand{\Pp}{\mathcal{P}}
+\newcommand{\Ll}{\mathcal{L}}
+\newcommand{\Hh}{\mathcal{H}}
+\newcommand{\Cc}{\mathcal{C}}
+
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\co}[1]{\left[#1\right]}
+\newcommand{\cc}[1]{\left(#1\right)}
 % https://github.com/rstudio/rmarkdown/issues/337
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
@@ -326,7 +351,27 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}
 
-We have finished a nice book.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Los puntos \(A=(60,13)\) y \(B=(-4,61)\) estan sobre una parabola \(\mathcal{P}\) además son simetricos con recpecto al eje focal. Desde un punto \(Q\) sobre el eje focal se traza un recta tangente a \(\mathcal{P}\) que pasa por \(B,\) hallar la ecuacion de \(\mathcal{P}\) y las ecuaciones de las rectas tangentes trazadas desde \(Q\).
+\end{enumerate}
+
+Ya que \(A\) y \(B\) son simetricas entonces \(P_0=\frac{A+B}{2}=(28,37) \in \mathcal{L}_F\) donde \(\mathcal{L}_F\) es el eje focal paralelo al vector \(\vec{AB}^\perp=(B-A)^\perp=(-64,48)\parallel(-4,3)=\vec{v}_L\) es decir \(\vec{v}_F\) y \(P_0\) nos genera la ecuacion del eje focal \(\mathcal{L}_F:4x+3y=1\) . De otro lado el punto \((20,x)\in\mathcal{L}_F\) que al reemplazarlo en la recta del eje focal nos genera \(x=-27\) de donde \(Q=(20,-27)\) ademas el vértice de la parabola es \(V=\frac{Q+P_0}{2}=(4,5)\) por propiedad.
+
+Con el objetivo de hallar el valor de \(\rho\) en la ecuacion \(y'^2=4\rho x'\) se halla las coordenadas de \(B\) en el nuevo sistema de coordenadas centrada en \(V\) con vector director \(\vec{u}=\frac{(3,4)}{5}\), haciendo uso de la relación \[(x,y)=V+x'\vec{u}+y'\vec{u}^\perp\] se obtiene \(x=\left[B-V\right]\vec{u}=40\) y \(y=\left[B-V\right]\vec{u}^\perp=40\) por tanto reemplazando \(B\) en \(y'^2=4\rho x'\) se tiene que \(\rho=10\)
+
+Los vectores directores de las rectas tangentes \(\mathcal{L}_A\) y \(\mathcal{L}_B\) \ldots{}
+\[\mathcal{L}_A:2y-11x-166=0\] y \(\mathcal{L}_B:5x-10y-170=0\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  ww
+\end{enumerate}
 
 \bibliography{book.bib,packages.bib}
 
