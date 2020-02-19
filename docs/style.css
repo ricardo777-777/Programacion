@@ -13,7 +13,10 @@ pre code {
   white-space: inherit;
 }
 
-
+h1, h2, h3, h4, h5 { font-family: serif;
+                     font-weight: 900;
+                     border-bottom: 1px dotted black;
+                     color:  #299882; }
 
 .book .book-body .page-wrapper .page-inner section.normal h1{font-size:1em}
 .book .book-body .page-wrapper .page-inner section.normal h2{font-size:1em}

@@ -12,7 +12,7 @@ description: "w"
 subparagraph: yes
 ---
 
-# Prerequisites
+# Prerequisites You can use anything that Pandoc's Markdown
 
 ## Datos
 Sean los datos que se prosiguen
