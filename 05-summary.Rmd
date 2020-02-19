@@ -1,4 +1,6 @@
 # Final Words
+1. Sea
+
 1. La circunferencia $\mathcal{C}=(x-3)^2+()y-3^2=25$ es tangente a una parábola $\mathcal{P}$ en $P_0=(x_0,y_0)$, $y_0>7$. La recta $\mathcal{L}:4x-3y+12=0$ es normal  a $\mathcal{P}$ y $\mathcal{C}$ en $P_0$ y corta al eje focal de $\mathcal{P}$ en el punto $R$. Si $\left|\vec{C_0P_0}\right|=\left|\vec{P_0R}\right|$ y si la distancia $d[P_0;eje focal]=4$, hallar la ecuación de la parábola $\mathcal{P}$. $C_0$ es el centro de la circunferencia y la absisa del vértice es menor que 6.
 
 $P_0=C_0\pm r\vec{u}_{\mathcal{L}}$ donde $r=5$, $C_0=(3,8)$ y $\vec{u}_{\mathcal{l}}=\frac{(3,4)}{5}$ es decir $P_0=(3,8)\pm 5\frac{(3,4)}{5}$ de esto consideramos $P_0=(x_0,y_0)=(6,12)$ por condición del problema con esto la recta tangente a $\mathcal{C}$ y $\mathcal{P}$ es $\mathcal{L}_T:(x,y)(3,4)=(3,4)(6,12)$ equivalentemente  $\mathcal{L}_T:3x+4y=66$.
