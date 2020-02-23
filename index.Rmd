@@ -12,7 +12,7 @@ description: "Problemas resueltos de Geometría analítica"
 subparagraph: yes
 ---
 
-# Prerequisites You can use anything that Pandoc's Markdown
+# Vectores
 
 ## Datos
 Sean los datos que se prosiguen
