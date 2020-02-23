@@ -139,10 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="lugar-geométrico.html"><a href="lugar-geométrico.html"><i class="fa fa-check"></i><b>3</b> Lugar geométrico</a></li>
 <li class="chapter" data-level="4" data-path="circunferencia.html"><a href="circunferencia.html"><i class="fa fa-check"></i><b>4</b> Circunferencia</a></li>
 <li class="chapter" data-level="5" data-path="parábolas.html"><a href="parábolas.html"><i class="fa fa-check"></i><b>5</b> Parábolas</a></li>
-<li class="chapter" data-level="6" data-path="hiperbola.html"><a href="hiperbola.html"><i class="fa fa-check"></i><b>6</b> Hiperbola</a><ul>
-<li class="chapter" data-level="6.1" data-path="hiperbola.html"><a href="hiperbola.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="hiperbola.html"><a href="hiperbola.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="hiperbola.html"><a href="hiperbola.html"><i class="fa fa-check"></i><b>6</b> Hiperbola</a></li>
 <li class="chapter" data-level="7" data-path="elipse.html"><a href="elipse.html"><i class="fa fa-check"></i><b>7</b> Elipse</a></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 </ul>
@@ -164,14 +161,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="hiperbola" class="section level1">
 <h1><span class="header-section-number">Capítulo 6</span> Hiperbola</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div id="example-one" class="section level2">
-<h2><span class="header-section-number">6.1</span> Example one</h2>
-</div>
-<div id="example-two" class="section level2">
-<h2><span class="header-section-number">6.2</span> Example two</h2>
+<p>Los puntos de un hipérbola verifican la siguiente ecuación</p>
+<p><span class="math display">\[\left|\left|P-F_1\right|+\left|P-F_1\right|\right|=2a\]</span></p>
+<p><span class="math inline">\(C=(h,k)\)</span> es el centro de la hipérbola; <span class="math inline">\(V_1\)</span> y <span class="math inline">\(V_2\)</span> son los vértices; <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> son los focos; <span class="math inline">\(\overline{V_1V_2}\)</span> es el eje transversal; <span class="math inline">\(\overline{B_1B_2}\)</span> es el eje conjugado; <span class="math inline">\(x&#39;\)</span> es el eje focal</p>
+<p><span class="math display">\[d\left[C;F_1\right]=d\left[C;F_2\right]=c\]</span></p>
+<p><span class="math inline">\(F_1=(-c,0)\)</span>; <span class="math inline">\(F_1=(c,0)\)</span> en el sistema coordenado <span class="math inline">\(x&#39;y&#39;\)</span>; <span class="math inline">\(\mathcal{C}\)</span> circunferencia con centro en <span class="math inline">\(C\)</span>, radio <span class="math inline">\(c\)</span> que pasa por los focos.</p>
+<p><span class="math inline">\(d\left[V_1;C\right]=d\left[V_2;C\right]=a\)</span></p>
+<p><span class="math display">\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}\]</span></p>
+<p><span class="math inline">\(c=ae\)</span>; <span class="math inline">\(d\left[C;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{a}{e}\)</span> y <span class="math inline">\(e&gt;1\)</span>; en efecto <span class="math display">\[\frac{d\left[R;F_1\right]}{d\left[R;\mathcal{L}_1\right]}=\frac{\frac{b^2}{a}}{c-d\left[C;\mathcal{L}_1\right]}=\frac{c^2-a^2}{a(c-d\left[C;\mathcal{L}_1\right])}\]</span></p>
+<p><span class="math display">\[\frac{d\left[V_2;F_1\right]}{d\left[V_2;\mathcal{L}_1\right]}=\frac{c-a}{a-d\left[C;\mathcal{L}_2\right]}.\]</span></p>
+<p>De la primera <span class="math display">\[d\left[C;\mathcal{L}_2\right]=a-\frac{c-a}{e}\implies c-d\left[C;\mathcal{L}_2\right]=a-\frac{(c-a)(e+1)}{e}.\]</span></p>
+<p>De la segunda ecuación <span class="math display">\[c^2-a^2=ae\frac{(c-a)(e+1)}{e}\implies c+a=a(e+1)\implies c=ae\]</span> luego <span class="math inline">\(d\left[C;\mathcal{L}_2\right]=a-\frac{(c-a)(ae+a)}{e}=\frac{a}{e}\)</span> y el caso <span class="math inline">\(d\left[C;\mathcal{L}_1\right]\)</span> es similar. Finalmente <span class="math inline">\(e=\frac{c}{a}&gt;1\)</span> pues <span class="math inline">\(0&lt;a&lt;c.\)</span></p>
+<p><span class="math inline">\(P=(x,y)=C+x&#39;\vec{u}+y&#39;\vec{u}^\perp\)</span> <span class="math inline">\(x&#39;=[(x,y)-C]\vec{u}\)</span> y <span class="math inline">\(y&#39;=[(x,y)-C]\vec{u}^\perp\)</span></p>
+<p><span class="math inline">\(F_1=C+c\vec{u}\)</span> y <span class="math inline">\(F_2=C-c\vec{u}\)</span> tambien <span class="math inline">\(V_1=C+a\vec{u}\)</span> y <span class="math inline">\(V_2=C-a\vec{u}\)</span> entonces <span class="math display">\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e\iff d\left[P;F_1\right]^2=e^2d\left[P;\mathcal{L}_1\right]^2\]</span> haciendo uso de <span class="math inline">\(c=ae\)</span> y <span class="math inline">\(c^2=a^2+b^2\)</span> se tiene lo siguiente</p>
+<p><span class="math display">\[(x&#39;-c)^2+y&#39;^2=e^2\left(x&#39;-\left(\frac{a}{e}\right)\right)^2\]</span></p>
+<p><span class="math display">\[(c^2-a^2) x&#39;^2+a^2y&#39;^2=a^2(c^2-a^2)\]</span></p>
+<p><span class="math display">\[b^2x&#39;^2-a^2y&#39;^2=a^2b^2\]</span></p>
+<p>De este modo <span class="math inline">\(P\in\mathcal{H}\)</span> si <span class="math inline">\(P\)</span> satisface la ecuación vectorial <span class="math display">\[P=(x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp;\: \text{donde } \frac{x&#39;^2}{a^2}-\frac{y&#39;^2}{b^2}=1; \:\left|\vec{u}\right|=1.\]</span></p>
+<p>Cuando el eje es paralelo al eje <span class="math inline">\(x\)</span>; <span class="math inline">\(\vec{u}=i=(1,0)\)</span> entonces <span class="math inline">\((x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp=(h+x&#39;,k+y&#39;)\implies x&#39;=x-h\)</span> y <span class="math inline">\(y&#39;=y-k\)</span> en <span class="math inline">\(\frac{x&#39;^2}{a^2}-\frac{y&#39;^2}{b^2}=1\)</span>; resulta <span class="math inline">\(\frac{(y-k)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\)</span>; (<span class="math inline">\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)</span>; si <span class="math inline">\(V\)</span> está en el origen); entonces <span class="math inline">\(F_1=C+c\vec{u}=(h-\frac{a}{e},k)\)</span> y <span class="math inline">\(F_2=C+c\vec{u}=(h-\frac{a}{e},k)\)</span>; <span class="math inline">\(\mathcal{L}_1: x=h-\frac{a}{e}\)</span> y <span class="math inline">\(\mathcal{L}_2: x=h+\frac{a}{e}\)</span> y las asíntotas de <span class="math inline">\(y&#39;=\pm\frac{a}{b}x&#39;\)</span> se convierte en <span class="math inline">\((y-k)=\pm\frac{a}{b}(x-h)\)</span>.</p>
+<p>Cuando el eje es paralelo al eje <span class="math inline">\(y\)</span>; <span class="math inline">\(\vec{u}=j=(0,1)\)</span> entonces <span class="math inline">\((x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp=(h-y&#39;,k+x&#39;)\implies x&#39;=y-k\)</span> y <span class="math inline">\(y&#39;=h-x\)</span> en <span class="math inline">\(\frac{x&#39;^2}{a^2}-\frac{y&#39;^2}{b^2}=1\)</span>; resulta <span class="math inline">\(\frac{(y-k)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\)</span>; (<span class="math inline">\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)</span>; si <span class="math inline">\(V\)</span> está en el origen); entonces <span class="math inline">\(F_1=C+c\vec{u}=(h+c,k)\)</span>; <span class="math inline">\(\mathcal{L}_1: x=k+\frac{a}{e}\)</span> y <span class="math inline">\(\mathcal{L}_2: x=k-\frac{a}{e}\)</span> y las asíntotas de <span class="math inline">\(y&#39;=\pm\frac{b}{a}x&#39;\)</span> se convierte en <span class="math inline">\((y-k)=\pm\frac{b}{a}(x-h)\)</span>.</p>
 
-</div>
 </div>
             </section>
 

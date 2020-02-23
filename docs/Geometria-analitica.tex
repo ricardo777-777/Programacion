@@ -263,74 +263,6 @@ Sean los datos \emph{emph} \textbf{\emph{real}} \textbf{Entonces}
 \hypertarget{intro}{%
 \chapter{Rectas}\label{intro}}
 
-You can label chapter and section titles using after them, e.g., we can reference Chapter. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter .
-
-Figures and tables with captions will be placed in and environments, respectively.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Geometria-analitica_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Reference a figure by its code chunk label with the prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
-
 \hypertarget{lugar-geomuxe9trico}{%
 \chapter{Lugar geométrico}\label{lugar-geomuxe9trico}}
 
@@ -339,10 +271,62 @@ Here is a review of existing methods.
 \hypertarget{circunferencia}{%
 \chapter{Circunferencia}\label{circunferencia}}
 
-We describe our methods in this chapter.
+Sea \(\vec{a}=(a_1,a_2)\) entonces el vector escalado es \(r\vec{a}\parallel\vec{a}\); el vector perpendicular a este es \(\vec{a}^\perp=(-a_2,a_1)\) la norma del vector \(\vec{a}\) es \(\left\|a\right\|=\sqrt{a_1^2+a_2^2}\) el vector unitario en la dirección de \(\vec{a}\) es \(\vec{\mu}=\frac{\vec{a}}{\left\|a\right\|}\) que es paralela a este. Dado dos puntos \(P_1\) y \(P_2\) estos definen un vector \(\vec{P_1P_2}=P_2-P_1\). Los vectores en dirección de los ejes positivos son \(i=(1,0)\) y \(j=(0,1)\); cualquier vector se pueden expresar en términos de estos es decir \(\vec{a}=(a_1,a_2)=a_1(1,0)+a_2(0,1)=a_1i+a_2j\). De acuerdo al ángulo de inclinación del vector se tiene la siguiente representación \(\vec{a}=\left\|\vec{a}\right\|(\cos\theta,\sin\theta)\).
+
+Dos vectores son ortogonales (\(\vec{a}\perp\vec{b}\)) si \(\left|\vec{a}-\vec{b}\right|=\left|\vec{a}+\vec{b}\right|\) y verifican
+
+\(\left|\vec{b}\right|^2+\left|\vec{b}\right|^2+=\left|\vec{a}+\vec{b}\right|^2\)
+\(\vec{a}\vec{b}=0\)
+\(\vec{a}\parallel\vec{b}^\perp\)
+\(\vec{a}\) y \(\vec{b}\) son LI si y solo si \(r\vec{a}+s\vec{b}=0\) implica \(r=0\) y \(s=0\).
+
+La proyeccion de \(\vec{a}\) sobre \(\vec{b}\) es otro vector \(\text{Proy}_{\vec{b}}\vec{a}\)
+
+\(\vec{a}=\text{Proy}_{\vec{b}}\vec{a}+\text{Proy}_{\vec{b}^\perp}\vec{a}\) si hacemos \(\vec{a}=p\vec{b}+q\vec{b}^\perp\) entonces \(q=\frac{\vec{a}\vec{b}}{\left\|\vec{b}\right\|^2}\) y \(p=\frac{\vec{a}\vec{b}^\perp}{\left\|\vec{b}\right\|^2}\) pues \(\left\|\vec{b}\right\|=\left\|\vec{b}^\perp\right\|\) entonces \(\text{Proy}_{\vec{b}}\vec{a}=\frac{\vec{a}\vec{b}}{\left\|\vec{b}\right\|^2}\vec{b}=\frac{\vec{a}\vec{b}}{\left\|\vec{b}\right\|}\frac{\vec{b}}{\left\|\vec{b}\right\|}=\text{Cp}_{\vec{b}}\vec{a}\frac{\vec{b}}{\left\|\vec{b}\right\|}\); \(\text{Cp}_{\vec{b}}\vec{a}=\frac{\vec{a}\vec{b}}{\left\|\vec{b}\right\|}\) recibe el nombre de componente de \(\vec{a}\) en la dirección de \(\vec{b}\)
+
+Dado \(P_0\) y un vector \(\vec{a}\) entonces la recta se define como el conjunto de puntos \(\mathcal{L}=\left\{P\in\mathbb{R}^2/P=P_0+t\vec{a};\: t\in \mathbb{R}\right\}\) que recibe el nombre de ecuación vectorial de la recta. \(P\in\mathcal{L}\iff (P-P_0)\cdot\vec{a}^\perp=0\). De la ecuación vectorial de la recta se tiene si \(P=(x.y)\); \(P_0=(x_0,y_0)\) y \(\vec{a}=(a_1,a_2)\) se tiene la ecuación paramétrica de la recta. \(x=x_0+ta_1\); \(y=y_0+ta_2\) de esto se obtiene la ecuación simétrica de la recta \[\frac{x-x_0}{a_1}=\frac{y-y_0}{a_2}.\] Sea \(\vec{n}=(a,b)=\vec{a}^\perp\) entonces se tiene que si \(P\in \mathcal{L}\) entonces \((P-P_0)\cdot \vec{n}=0\) pues son perpendicualres; entonces \(P\cdot \vec{n}=P_0\cdot \vec{n}\iff ax+by=-c\implies ax+by+c=0\) que recibe el nombre de ecuación general de la recta. Sea \(Q=(x_1,y_1)\) un punto exterior a \(\mathcal{L}\) entonces la distancia de \(Q\) a \(\mathcal{L}\) se define como
+
+\begin{align*}d[Q;\mathcal{L}] & =\left|\text{Cp}_{\vec{n}}(Q-P_0)\right| \\
+& =\left|\frac{(Q-P_0)\cdot\vec{n}}{\left|\vec{n}\right|}\right| \\
+& =\left|\frac{Q\cdot\vec{n}-P_0\cdot\vec{n}}{\left|\vec{n}\right|}\right| \\
+& =\frac{\left|ax_1+by_1+c\right|}{\sqrt{a^2+b^2}}
+\end{align*}
+
+Sean \(\mathcal{L}_1\) y \(\mathcal{L}_2\) dos rectas; con vectores directores \(\vec{a}=(a_1,a_2)\) y \(\vec{b}=(b_1,b_2)\) respectivamente; entonces \(\mathcal{L}_1\cap\mathcal{L}_2=(d_1,d_2)\) donde \(d_1\) y \(d_2\) satisfacen el sistema generado por las ecuaciones generales de \(\mathcal{L}_1\) y \(\mathcal{L}_2\); \(a_1x+a_1y+k_1=0\) y \(b_1x+b_1y+k_2=0\).
+
+La pendiente de una recta se deduce de su vector director es decir si \(\vec{a}=(a_1,a_2)\) entonces \(m=\frac{a_2}{a_1}\); de esto se deduce \(\vec{a}=(a_1,a_2)=a_1(1,\frac{a_2}{a_1})=a_1(1,m)\). El angulo generado por las \(\mathcal{L}_1\) con pendiente \(m_1\) y \(\mathcal{L}_2\) con pendiente \(m_1\); está dada por \(\theta=\arctan\left(\frac{m_1-m_2}{1+m_1m_2}\right)\).
+
+El círculo se define como el conjunto de punto \(P=(x,y)\) que satisfacen la ecuación \[\left \|P-C\right\|=r\] \(r>0\) es el radio, \(C=(h,k)\) es el centro entonces la ecuación del círculo es \[\left \|P-C\right\|=r\iff (x-h)^2+(y-k)^2=r^2.\]
+
+La ecuación de la recta tangente en \(P_0=(x_0,y_0)\) (\(P=P_0\) en el gráfico) está dada por \[(Q-P_0)\cdot(P_0-C)=0\] donde \(Q=(x,y)\neq P\) cualquiera; entonces \[(Q-P_0)\cdot(P_0-C)=0\iff  (x-x_0,y-y_0)(x_0-h,y_0-k)=0\] lo cual es equivalente a \[(x-h)(x_0-h)+(x-k)(y_0-k)=r^2\]
 
 \hypertarget{paruxe1bolas}{%
 \chapter{Parábolas}\label{paruxe1bolas}}
+
+Sean la recta \(\mathcal{L}\) y el punto \(F\) fijos; los puntos \(P\) que satisfacen \[d\left[P;F\right]=d\left[P;\mathcal{L}\right]=\left|p\right|\] la excentricidad es el cociente de estas dos distancias igual a \(1\).
+
+\(\mathcal{L}\) es la recta directriz cuya ecuación es \(x'=-p\); \(F\) es el foco; \(V=(h,k)\) vértice, \(p\) parámetro de la parábola ; \(RR'\) lado recto de la parábola.
+
+\(P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp\) \(x'=[(x,y)-V]\vec{u}\) y \(y'=[(x,y)-V]\vec{u}^\perp\)
+
+\(\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}\); \(F=V+p\vec{u}\) luego \[d[P;\mathcal{L}]=\left|\text{Cp}_{\vec{u}}\vec{PQ}\right|=\left|(Q-P)\cdot\vec{u}\right|=\left|x'+p\right|\]
+
+\[d[P;F]=\left|P-F\right|=\left|(x'-p)\vec{u}+y'\vec{u}^\perp\right|\] por lo tanto
+
+\begin{align*}
+d\left[P;F\right]^2=d\left[P;\mathcal{L}\right]^2
+& \implies \left|(x'+p)\vec{u}+y'\vec{u}^\perp\right|^2=\left|x'+p\right|^2 \\
+&\implies (x'-p)^2+y'^2=(x'+p)^2\\
+&\implies y'^2=4px'
+\end{align*}
+
+De este modo \(P\in\mathcal{P}\) si \(P\) satisface la ecuacion vectorial \[P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp;\: \text{donde } y'^2=4px'; \:\left|\vec{u}\right|=1\]
+
+Cuando el eje es paralelo al eje \(x\); \(\vec{u}=i=(1,0)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h+x',k+y')\implies x'=x-h\) y \(y'=y-k\) en \$ y'\^{}2=4px'\$ resulta \((y-k)^2=4p(x-h)\) (\(y^2=4px\) si \(V\) está en el origen); entonces \(F=V+p\vec{u}=(h+p,k)\); \(\mathcal{L}: x=h-p\). Si \(p<1\) la parábola se invierte simétricamente a la directriz.
+
+Cuando el eje es paralelo al eje \(y\); \(\vec{u}=j=(0,1)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h-y',k+x')\implies x'=y-k\) y \(y'=h-x\) en \$ y'\^{}2=4px'\$ resulta \((x-h)^2=4p(y-k)\) (\(x^2=4py\) si \(V\) está en el origen); entonces \(F=V+p\vec{u}=(h,k+p)\); \(\mathcal{L}: x=k-p\). Si \(p<1\) la parábola se invierte simétricamente a la directriz.
+
+La ecuación de la recta tangente a \(y^2=4px\) en el punto \(P_0=(x_0,y_0)\) está dada por \(y=\frac{2p}{y_0}(x+x_0)\) y la ecuación de la recta tangente a \((y-k)^2=4p(x-h)\) en el punto \(P_0=(x_0,y_0)\) está dada por \((y_0-k)(x_0-k)=4p\left[\left(\frac{x+x_0}{2}-h\right)\right]\) similarmente la ecuación de la recta tangente a \((x-h)^2=4p(y-k)\) en el punto \(P_0=(x_0,y_0)\) está dada por \((x_0-h)(x_0-h)=4p\left[\left(\frac{y+y_0}{2}-h\right)\right]\).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -380,18 +364,73 @@ Los vectores directores de las rectas tangentes en el sistema \(x'y'\) son \((2,
 \hypertarget{hiperbola}{%
 \chapter{Hiperbola}\label{hiperbola}}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+Los puntos de un hipérbola verifican la siguiente ecuación
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\[\left|\left|P-F_1\right|+\left|P-F_1\right|\right|=2a\]
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+\(C=(h,k)\) es el centro de la hipérbola; \(V_1\) y \(V_2\) son los vértices; \(F_1\) y \(F_2\) son los focos; \(\overline{V_1V_2}\) es el eje transversal; \(\overline{B_1B_2}\) es el eje conjugado; \(x'\) es el eje focal
+
+\[d\left[C;F_1\right]=d\left[C;F_2\right]=c\]
+
+\(F_1=(-c,0)\); \(F_1=(c,0)\) en el sistema coordenado \(x'y'\); \(\mathcal{C}\) circunferencia con centro en \(C\), radio \(c\) que pasa por los focos.
+
+\(d\left[V_1;C\right]=d\left[V_2;C\right]=a\)
+
+\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}\]
+
+\(c=ae\); \(d\left[C;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{a}{e}\) y \(e>1\); en efecto \[\frac{d\left[R;F_1\right]}{d\left[R;\mathcal{L}_1\right]}=\frac{\frac{b^2}{a}}{c-d\left[C;\mathcal{L}_1\right]}=\frac{c^2-a^2}{a(c-d\left[C;\mathcal{L}_1\right])}\]
+
+\[\frac{d\left[V_2;F_1\right]}{d\left[V_2;\mathcal{L}_1\right]}=\frac{c-a}{a-d\left[C;\mathcal{L}_2\right]}.\]
+
+De la primera \[d\left[C;\mathcal{L}_2\right]=a-\frac{c-a}{e}\implies c-d\left[C;\mathcal{L}_2\right]=a-\frac{(c-a)(e+1)}{e}.\]
+
+De la segunda ecuación \[c^2-a^2=ae\frac{(c-a)(e+1)}{e}\implies c+a=a(e+1)\implies c=ae\] luego \(d\left[C;\mathcal{L}_2\right]=a-\frac{(c-a)(ae+a)}{e}=\frac{a}{e}\) y el caso \(d\left[C;\mathcal{L}_1\right]\) es similar. Finalmente \(e=\frac{c}{a}>1\) pues \(0<a<c.\)
+
+\(P=(x,y)=C+x'\vec{u}+y'\vec{u}^\perp\) \(x'=[(x,y)-C]\vec{u}\) y \(y'=[(x,y)-C]\vec{u}^\perp\)
+
+\(F_1=C+c\vec{u}\) y \(F_2=C-c\vec{u}\) tambien \(V_1=C+a\vec{u}\) y \(V_2=C-a\vec{u}\) entonces \[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e\iff d\left[P;F_1\right]^2=e^2d\left[P;\mathcal{L}_1\right]^2\] haciendo uso de \(c=ae\) y \(c^2=a^2+b^2\) se tiene lo siguiente
+
+\[(x'-c)^2+y'^2=e^2\left(x'-\left(\frac{a}{e}\right)\right)^2\]
+
+\[(c^2-a^2) x'^2+a^2y'^2=a^2(c^2-a^2)\]
+
+\[b^2x'^2-a^2y'^2=a^2b^2\]
+
+De este modo \(P\in\mathcal{H}\) si \(P\) satisface la ecuación vectorial \[P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp;\: \text{donde } \frac{x'^2}{a^2}-\frac{y'^2}{b^2}=1; \:\left|\vec{u}\right|=1.\]
+
+Cuando el eje es paralelo al eje \(x\); \(\vec{u}=i=(1,0)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h+x',k+y')\implies x'=x-h\) y \(y'=y-k\) en \(\frac{x'^2}{a^2}-\frac{y'^2}{b^2}=1\); resulta \(\frac{(y-k)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\); (\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\); si \(V\) está en el origen); entonces \(F_1=C+c\vec{u}=(h-\frac{a}{e},k)\) y \(F_2=C+c\vec{u}=(h-\frac{a}{e},k)\); \(\mathcal{L}_1: x=h-\frac{a}{e}\) y \(\mathcal{L}_2: x=h+\frac{a}{e}\) y las asíntotas de \(y'=\pm\frac{a}{b}x'\) se convierte en \((y-k)=\pm\frac{a}{b}(x-h)\).
+
+Cuando el eje es paralelo al eje \(y\); \(\vec{u}=j=(0,1)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h-y',k+x')\implies x'=y-k\) y \(y'=h-x\) en \(\frac{x'^2}{a^2}-\frac{y'^2}{b^2}=1\); resulta \(\frac{(y-k)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\); (\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\); si \(V\) está en el origen); entonces \(F_1=C+c\vec{u}=(h+c,k)\); \(\mathcal{L}_1: x=k+\frac{a}{e}\) y \(\mathcal{L}_2: x=k-\frac{a}{e}\) y las asíntotas de \(y'=\pm\frac{b}{a}x'\) se convierte en \((y-k)=\pm\frac{b}{a}(x-h)\).
 
 \hypertarget{elipse}{%
 \chapter{Elipse}\label{elipse}}
 
-www
+Dados dos puntos distintos \(F_1\) y \(F_2\) llamados focos; la elipse \(\mathcal{E}\) es el conjunto formado por los puntos \(P\) que satisfacen la ecuacion \[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]
+
+\(C=(h,k)\) es el centro de la elipse; \(x'\) eje focal, \(V_1\) y \(V_2\) son los vértices de la elipse; \(\overline{V_1V_2}\) el eje mayor \(\overline{RR'}\) el lado recto; \(\overline{B_1B_2}\) el eje menor de longitud \(2b\). En el sistema \(x'y'\) se tiene \(B_1=(0,b)'\); \(B_2=(0,-b)'\); \(F_1=(-c,0)'\); \(F_2=(c,0)'\) y \(C=(0,0)'\).
+
+La excentricidad \(e\) se define como
+
+\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}\]
+
+\(d\left[B_i;F_1\right]=d\left[B_i;F_2\right]= a\) y \(d\left[V_i;C\right]=d\left[V_i;C\right]=a\), \(i=1,2\). \(d\left[C;;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{a}{e}\) pues \(\frac{d\left[B_i;F_1\right]}{d\left[B_i;\mathcal{L}_1\right]}=e\implies \frac{a}{d\left[B;\mathcal{L}_1\right]}=e\). Sea \(c=d\left[P;F_1\right]=d\left[P;F_2\right]\implies c=ae\) pues \(\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e\implies \frac{a-c}{\frac{a}{e}-a}=e \implies c=ae\). \(a>b\) y \(a^2=b^2+c^2\); pues \(a=d\left[B_1;F_2\right]=d\left[(0,b^2+c^2)';(c,0)'\right]^2=\sqrt{b}\); \(0<e<1\) debido a que \(0<e=\frac{a}{e}<1\) y \(a>c>0\).
+
+\(P=(x,y)=C+x'\vec{u}+y'\vec{u}^\perp\); \(x'=[(x,y)-C]\vec{u}\); \(y'=[(x,y)-C]\vec{u}^\perp\)
+
+\(F_1=C+c\vec{u}\) y \(F_2=C-c\vec{u}\) entonces
+
+\begin{align*}
+\left|P-F_1\right|+\left|P-F_2\right|&=\left|C+x'\vec{u}+y'\vec{u}^\perp-C+c\vec{u}\right|\\
+&\quad+\left|C+x'\vec{u}+y'\vec{u}^\perp-C-c\vec{u}\right|\\
+&=\sqrt{(x'+c)^2+y'^2}+\sqrt{(x'-c)^2+y'^2}=2a\end{align*}
+
+por lo tanto resolviendo \(\sqrt{(x'+c)^2+y'^2}+\sqrt{(x'-c)^2+y'^2}=2a\) resulta \((a^2-c^2)x'^2+ay'^2=a^2(a^2-c^2)\implies b^2x'^2+a^2y'^2=a^2b^2\)
+
+De este modo \(P\in\mathcal{E}\) si \(P\) satisface la ecuación vectorial \[P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp;\: \text{donde } \frac{x'^2}{a^2}+\frac{y'^2}{b^2}=1; \:\left|\vec{u}\right|=1\]
+
+Cuando el eje es paralelo al eje \(x\); \(\vec{u}=i=(1,0)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h+x',k+y')\implies x'=x-h\) y \(y'=y-k\) en \(\frac{x'^2}{a^2}+\frac{y'^2}{b^2}=1\) resulta \(\frac{(y-k)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\) (\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) si \(V\) está en el origen); entonces \(F_1=C+c\vec{u}=(h+c,k)\); \(\mathcal{L}_1: x=h+\frac{a}{e}\) y \(\mathcal{L}_2: x=h-\frac{a}{e}\).
+
+Cuando el eje es paralelo al eje \(y\); \(\vec{u}=j=(0,1)\) entonces \((x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h-y',k+x')\implies x'=y-k\) y \(y'=h-x\) en \(\frac{x'^2}{a^2}+\frac{y'^2}{b^2}=1\) resulta \(\frac{(y-k)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\) (\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) si \(V\) está en el origen); entonces \(F_1=C+c\vec{u}=(h+c,k)\); \(\mathcal{L}_1: x=k+\frac{a}{e}\) y \(\mathcal{L}_2: x=k-\frac{a}{e}\).
 
 \bibliography{book.bib,packages.bib}
 
