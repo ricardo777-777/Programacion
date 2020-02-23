@@ -1,4 +1,4 @@
-# Ejercicos parábolas
+# Parábolas
 1. Al realizarse una transformacion de coordenadas, el eje de una parabola $\mathcal{P}$ resulta orientada segun el vector $(3,4)$. En $x'y'$ un punto $Q'=(20,-20)'\in\mathcal{P}$ en els sistema $xy$ el foco de $\mathcal{P}$ $E=(11,5)$. Determinar en el sistema $xy$ un punto $R$ de la parabola $\mathcal{P}$ tal que el trinagulo $QVR$ sea rectangulo en $V$ vertice de la parábola.  
 
 
@@ -25,3 +25,4 @@ Con el objetivo de hallar el valor de $\rho$ en la ecuación $y'^2=4\rho x'$ se 
 Los vectores directores de las rectas tangentes en el sistema $x'y'$ son $(2,1)$ y $(2,-1)$ respectivamente por tanto   sus ecuaciones son $\mathcal{L}_A: 2y'=x'+40$ y $\mathcal{L}_B=-2y'=x'+40$ estas ecuaciones en el sistema original con $x'=\left[(x,y)-(4,5)\right]\frac{(3,4)}{5}$ y  $y'=\left[(x,y)-(4,5)\right]\frac{(-4,3)}{5}$ reemplazadas resultan $\mathcal{L}_A:2y-11x-166=0$ y $\mathcal{L}_B:5x-10y-170=0$ 
 
 1. ww
+

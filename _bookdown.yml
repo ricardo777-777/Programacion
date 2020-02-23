@@ -1,9 +1,9 @@
-output_dir: "docs"
-book_filename: "Geometria-analitica"
-delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Capítulo "
-  label:
-    fig: "Figura "
-    tab: "Tabla "
+  output_dir: "docs"
+  book_filename: "Geometria-analitica"
+  delete_merged_file: true
+  language:
+    ui:
+      chapter_name: "Capítulo "
+    label:
+      fig: "Figura "
+      tab: "Tabla "

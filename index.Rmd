@@ -12,7 +12,7 @@ description: "Problemas resueltos de Geometría analítica"
 subparagraph: yes
 ---
 
-# Vectores
+# Algebra vectorial
 
 ## Datos
 Sean los datos que se prosiguen

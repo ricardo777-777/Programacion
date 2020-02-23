@@ -1,6 +1,6 @@
-# Hipérbolas {#intro}
+# Rectas {#intro}
 
-You can label chapter and section titles using  after them, e.g., we can reference Chapter \@ref(literature). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+You can label chapter and section titles using  after them, e.g., we can reference Chapter. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter .
 
 Figures and tables with captions will be placed in  and  environments, respectively.
 
