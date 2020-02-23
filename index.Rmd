@@ -1,5 +1,5 @@
 --- 
-title: "Resumenes"
+title: "Geometría analítica"
 author: "MALLQUI BAÑOS Ricardo Michel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,7 +8,7 @@ fontsize: 12pt
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "w"
+description: "Problemas resueltos de Geometría analítica"
 subparagraph: yes
 ---
 
