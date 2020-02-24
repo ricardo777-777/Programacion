@@ -1,6 +1,6 @@
 # Hiperbola
 
-Los puntos de un hipérbola  verifican la siguiente ecuación
+Los puntos \\(P\\) de un hipérbola  verifican la siguiente ecuación
 
 $$\left|\left|P-F_1\right|+\left|P-F_1\right|\right|=2a$$
 
