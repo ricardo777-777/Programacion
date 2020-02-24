@@ -10,7 +10,7 @@ $$d\left[C;F_1\right]=d\left[C;F_2\right]=c$$
 
 $F_1=(-c,0)$; $F_1=(c,0)$ en el sistema coordenado $x'y'$; $\mathcal{C}$ circunferencia con centro en $C$, radio $c$ que pasa por los focos.
 
-$d\left[V_1;C\right]=d\left[V_2;C\right]=a$
+\[d\left[V_1;C\right]=d\left[V_2;C\right]=a\]
 
 
 ```{r hiperbola, echo=FALSE, fig.cap="Elipse vectorial", fig.align="center"}
