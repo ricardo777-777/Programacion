@@ -44,3 +44,4 @@ El círculo se define como el conjunto de punto $P=(x,y)$ que satisfacen la ecua
 
 La ecuación de la recta tangente en $P_0=(x_0,y_0)$ ($P=P_0$ en el gráfico) está dada por $$(Q-P_0)\cdot(P_0-C)=0$$ donde $Q=(x,y)\neq P$ cualquiera; entonces $$(Q-P_0)\cdot(P_0-C)=0\iff  (x-x_0,y-y_0)(x_0-h,y_0-k)=0$$ lo cual es equivalente a $$(x-h)(x_0-h)+(x-k)(y_0-k)=r^2$$
 
+
