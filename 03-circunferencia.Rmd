@@ -2,7 +2,10 @@
 
 Sea $\vec{a}=(a_1,a_2)$ entonces el vector escalado es $r\vec{a}\parallel\vec{a}$; el vector perpendicular a este es $\vec{a}^\perp=(-a_2,a_1)$ la norma del vector $\vec{a}$ es $\left\|a\right\|=\sqrt{a_1^2+a_2^2}$ el vector unitario en la dirección de $\vec{a}$ es $\vec{\mu}=\frac{\vec{a}}{\left\|a\right\|}$ que es paralela a este. Dado dos puntos $P_1$ y $P_2$ estos definen un vector $\vec{P_1P_2}=P_2-P_1$. Los vectores en dirección de los ejes positivos son $i=(1,0)$ y $j=(0,1)$; cualquier vector se pueden expresar en términos de estos es decir $\vec{a}=(a_1,a_2)=a_1(1,0)+a_2(0,1)=a_1i+a_2j$. De acuerdo al ángulo de inclinación del vector se tiene la siguiente representación $\vec{a}=\left\|\vec{a}\right\|(\cos\theta,\sin\theta)$.
 
-
+```{theorem, www, name="russ"}
+Dada el espacio $R$ y $r\in R$ se tiene que $\mathcal{R}(r)=\lim_{t\to\infty}g(y)_r$
+```
+$\sum$
 
 ```{r C1, echo=FALSE, fig.cap="Elipse vectorial", fig.align="center"}
 knitr::include_graphics("circunferencia.svg")
@@ -40,3 +43,4 @@ La pendiente de una recta se deduce de su vector director es decir si $\vec{a}=(
 El círculo se define como el conjunto de punto $P=(x,y)$ que satisfacen la ecuación $$\left \|P-C\right\|=r$$ $r>0$ es el radio,  $C=(h,k)$ es el centro entonces la ecuación del círculo es $$\left \|P-C\right\|=r\iff (x-h)^2+(y-k)^2=r^2.$$
 
 La ecuación de la recta tangente en $P_0=(x_0,y_0)$ ($P=P_0$ en el gráfico) está dada por $$(Q-P_0)\cdot(P_0-C)=0$$ donde $Q=(x,y)\neq P$ cualquiera; entonces $$(Q-P_0)\cdot(P_0-C)=0\iff  (x-x_0,y-y_0)(x_0-h,y_0-k)=0$$ lo cual es equivalente a $$(x-h)(x_0-h)+(x-k)(y_0-k)=r^2$$
+

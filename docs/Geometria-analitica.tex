@@ -205,8 +205,24 @@
 
 \title{Geometría analítica}
 \author{MALLQUI BAÑOS Ricardo Michel}
-\date{2020-02-23}
+\date{2020-02-24}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
 \maketitle
 
@@ -272,6 +288,12 @@ Here is a review of existing methods.
 \chapter{Circunferencia}\label{circunferencia}}
 
 Sea \(\vec{a}=(a_1,a_2)\) entonces el vector escalado es \(r\vec{a}\parallel\vec{a}\); el vector perpendicular a este es \(\vec{a}^\perp=(-a_2,a_1)\) la norma del vector \(\vec{a}\) es \(\left\|a\right\|=\sqrt{a_1^2+a_2^2}\) el vector unitario en la dirección de \(\vec{a}\) es \(\vec{\mu}=\frac{\vec{a}}{\left\|a\right\|}\) que es paralela a este. Dado dos puntos \(P_1\) y \(P_2\) estos definen un vector \(\vec{P_1P_2}=P_2-P_1\). Los vectores en dirección de los ejes positivos son \(i=(1,0)\) y \(j=(0,1)\); cualquier vector se pueden expresar en términos de estos es decir \(\vec{a}=(a_1,a_2)=a_1(1,0)+a_2(0,1)=a_1i+a_2j\). De acuerdo al ángulo de inclinación del vector se tiene la siguiente representación \(\vec{a}=\left\|\vec{a}\right\|(\cos\theta,\sin\theta)\).
+
+\BeginKnitrBlock{theorem}[russ]
+\protect\hypertarget{thm:www}{}{\label{thm:www} \iffalse (russ) \fi{} }Dada el espacio \(R\) y \(r\in R\) se tiene que \(\mathcal{R}(r)=\lim_{t\to\infty}g(y)_r\)
+\EndKnitrBlock{theorem}
+
+\(\sum\)
 
 \begin{figure}
 
