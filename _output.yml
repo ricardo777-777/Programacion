@@ -2,7 +2,7 @@ bookdown::gitbook:
   css: style.css
   config:
     fontsettings:
-      theme: white
+      theme: sepia
       size: 2
       family: serif
     toc:

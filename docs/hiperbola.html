@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 6 Hiperbola | Geometría analítica</title>
+  <title>Capítulo 7 Hiperbola | Geometría analítica</title>
   <meta name="description" content="Problemas resueltos de Geometría analítica" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 6 Hiperbola | Geometría analítica" />
+  <meta property="og:title" content="Capítulo 7 Hiperbola | Geometría analítica" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 6 Hiperbola | Geometría analítica" />
+  <meta name="twitter:title" content="Capítulo 7 Hiperbola | Geometría analítica" />
   
   <meta name="twitter:description" content="Problemas resueltos de Geometría analítica" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="parábolas.html"/>
-<link rel="next" href="elipse.html"/>
+<link rel="prev" href="elipse.html"/>
+<link rel="next" href="referencias.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -139,8 +139,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="lugar-geométrico.html"><a href="lugar-geométrico.html"><i class="fa fa-check"></i><b>3</b> Lugar geométrico</a></li>
 <li class="chapter" data-level="4" data-path="circunferencia.html"><a href="circunferencia.html"><i class="fa fa-check"></i><b>4</b> Circunferencia</a></li>
 <li class="chapter" data-level="5" data-path="parábolas.html"><a href="parábolas.html"><i class="fa fa-check"></i><b>5</b> Parábolas</a></li>
-<li class="chapter" data-level="6" data-path="hiperbola.html"><a href="hiperbola.html"><i class="fa fa-check"></i><b>6</b> Hiperbola</a></li>
-<li class="chapter" data-level="7" data-path="elipse.html"><a href="elipse.html"><i class="fa fa-check"></i><b>7</b> Elipse</a></li>
+<li class="chapter" data-level="6" data-path="elipse.html"><a href="elipse.html"><i class="fa fa-check"></i><b>6</b> Elipse</a></li>
+<li class="chapter" data-level="7" data-path="hiperbola.html"><a href="hiperbola.html"><i class="fa fa-check"></i><b>7</b> Hiperbola</a></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 </ul>
 
@@ -160,13 +160,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="hiperbola" class="section level1">
-<h1><span class="header-section-number">Capítulo 6</span> Hiperbola</h1>
+<h1><span class="header-section-number">Capítulo 7</span> Hiperbola</h1>
 <p>Los puntos de un hipérbola verifican la siguiente ecuación</p>
 <p><span class="math display">\[\left|\left|P-F_1\right|+\left|P-F_1\right|\right|=2a\]</span></p>
 <p><span class="math inline">\(C=(h,k)\)</span> es el centro de la hipérbola; <span class="math inline">\(V_1\)</span> y <span class="math inline">\(V_2\)</span> son los vértices; <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> son los focos; <span class="math inline">\(\overline{V_1V_2}\)</span> es el eje transversal; <span class="math inline">\(\overline{B_1B_2}\)</span> es el eje conjugado; <span class="math inline">\(x&#39;\)</span> es el eje focal</p>
 <p><span class="math display">\[d\left[C;F_1\right]=d\left[C;F_2\right]=c\]</span></p>
 <p><span class="math inline">\(F_1=(-c,0)\)</span>; <span class="math inline">\(F_1=(c,0)\)</span> en el sistema coordenado <span class="math inline">\(x&#39;y&#39;\)</span>; <span class="math inline">\(\mathcal{C}\)</span> circunferencia con centro en <span class="math inline">\(C\)</span>, radio <span class="math inline">\(c\)</span> que pasa por los focos.</p>
 <p><span class="math inline">\(d\left[V_1;C\right]=d\left[V_2;C\right]=a\)</span></p>
+<div class="figure" style="text-align: center"><span id="fig:hiperbola"></span>
+<img src="hiperbola.svg" alt="Elipse vectorial"  />
+<p class="caption">
+Figura 7.1: Elipse vectorial
+</p>
+</div>
 <p><span class="math display">\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}\]</span></p>
 <p><span class="math inline">\(c=ae\)</span>; <span class="math inline">\(d\left[C;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{a}{e}\)</span> y <span class="math inline">\(e&gt;1\)</span>; en efecto <span class="math display">\[\frac{d\left[R;F_1\right]}{d\left[R;\mathcal{L}_1\right]}=\frac{\frac{b^2}{a}}{c-d\left[C;\mathcal{L}_1\right]}=\frac{c^2-a^2}{a(c-d\left[C;\mathcal{L}_1\right])}\]</span></p>
 <p><span class="math display">\[\frac{d\left[V_2;F_1\right]}{d\left[V_2;\mathcal{L}_1\right]}=\frac{c-a}{a-d\left[C;\mathcal{L}_2\right]}.\]</span></p>
@@ -187,8 +193,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="parábolas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="elipse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="elipse.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -214,7 +220,7 @@ gitbook.start({
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
-"theme": "white",
+"theme": "sepia",
 "family": "serif",
 "size": 2
 },
