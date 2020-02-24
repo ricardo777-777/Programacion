@@ -5,6 +5,9 @@ $\mathcal{L}$ es  la  recta directriz cuya ecuación es $x'=-p$;  $F$ es el foco
 
 
 
+```{r hiperbola1, echo=FALSE, fig.cap="Elipse vectorial", fig.align="center"}
+knitr::include_graphics("parabola.svg")
+```
 
 $P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp$ $x'=[(x,y)-V]\vec{u}$ y $y'=[(x,y)-V]\vec{u}^\perp$
 
