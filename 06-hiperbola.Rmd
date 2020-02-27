@@ -1,13 +1,9 @@
 # Hiperbola
 
 Los puntos \\(P\\) de un hipérbola  verifican la siguiente ecuación
-
 $$\left|\left|P-F_1\right|+\left|P-F_1\right|\right|=2a$$
-
 $C=(h,k)$ es el centro de la hipérbola; $V_1$ y $V_2$ son los vértices; $F_1$ y $F_2$ son los focos; $\overline{V_1V_2}$ es el eje transversal; $\overline{B_1B_2}$ es el eje conjugado; $x'$ es el eje focal
-
 $$d\left[C;F_1\right]=d\left[C;F_2\right]=c$$
-
 $F_1=(-c,0)$; $F_1=(c,0)$ en el sistema coordenado $x'y'$; $\mathcal{C}$ circunferencia con centro en $C$, radio $c$ que pasa por los focos.
 
 \[d\left[V_1;C\right]=d\left[V_2;C\right]=a\]
