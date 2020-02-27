@@ -11,9 +11,12 @@ link-citations: yes
 description: "Problemas resueltos de Geometría analítica"
 subparagraph: yes
 ---
-
+<!--
+git config --global user.email "ricardomallqui6@gmail.com"
+git config --global user.name "ricardofisma"
+-->
 # Algebra vectorial
-
+Sea la la realcion oportuna entre los demas opciones conseguir una de las acciones consistentes de elegirla ecuacion anterior porque se desea que las equivalencias sean congruentes es decir que las deducciones sean logicas y buenas de acuerdo a ls opciones de la gente que debe tener en cuenta las demas opciones congruentes. $$\frac{\rho\vec{r}}{\left(\int_1^2\right)}$$
 ## Datos
 Sean los datos que se prosiguen
 
@@ -31,11 +34,7 @@ This is a _sample_ book written in **Markdown**. You can use anything that Pando
 
 The **bookdown** package can be installed from CRAN or Github:
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+
 
 Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading .
 
