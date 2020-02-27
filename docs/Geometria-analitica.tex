@@ -56,6 +56,12 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
 \usepackage[scaled=0.92]{helvet}
 
 \usepackage[skip=0pt]{caption}
@@ -138,6 +144,22 @@
 \newcommand{\seq}[1]{\left<#1\right>}
 \newcommand{\co}[1]{\left[#1\right]}
 \newcommand{\cc}[1]{\left(#1\right)}
+% https://github.com/rstudio/rmarkdown/issues/337
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+% https://github.com/rstudio/rmarkdown/pull/252
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+\pretitle{\vspace{\droptitle}\centering\huge}
+\posttitle{\par}
+
+\preauthor{\centering\large\emph}
+\postauthor{\par}
+
+\predate{\centering\large\emph}
+\postdate{\par}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
@@ -342,6 +364,7 @@ Los vectores directores de las rectas tangentes en el sistema \(x'y'\) son \((2,
 \hypertarget{elipse}{%
 \chapter{Elipse}\label{elipse}}
 
+\[\epsilon_1^7\]
 Dados dos puntos distintos \(F_1\) y \(F_2\) llamados focos; la elipse \(\mathcal{E}\) es el conjunto formado por los puntos \(P\) que satisfacen la ecuacion \[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]
 
 \(C=(h,k)\) es el centro de la elipse; \(x'\) eje focal, \(V_1\) y \(V_2\) son los vértices de la elipse; \(\overline{V_1V_2}\) el eje mayor \(\overline{RR'}\) el lado recto; \(\overline{B_1B_2}\) el eje menor de longitud \(2b\). En el sistema \(x'y'\) se tiene \(B_1=(0,b)'\); \(B_2=(0,-b)'\); \(F_1=(-c,0)'\); \(F_2=(c,0)'\) y \(C=(0,0)'\).

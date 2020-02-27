@@ -1,5 +1,5 @@
 # Elipse
-
+$$\epsilon_1^7$$
 Dados dos puntos distintos $F_1$ y $F_2$ llamados focos; la elipse $\mathcal{E}$ es el conjunto formado por  los puntos $P$ que satisfacen la ecuacion  $$\left|P-F_1\right|+\left|P-F_2\right|=2a.$$
 
 $C=(h,k)$ es el centro de la elipse; $x'$ eje focal, $V_1$ y $V_2$ son los vértices de la elipse; $\overline{V_1V_2}$ el eje mayor $\overline{RR'}$ el lado recto; $\overline{B_1B_2}$ el eje menor de longitud $2b$. En el sistema $x'y'$ se tiene $B_1=(0,b)'$; $B_2=(0,-b)'$; $F_1=(-c,0)'$; $F_2=(c,0)'$  y $C=(0,0)'$. 
