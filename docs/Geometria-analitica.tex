@@ -66,7 +66,6 @@
 
 \usepackage[skip=0pt]{caption}
 
-\usepackage{sidecap}
 \renewcommand{\rmdefault}{ptm}
 
 
@@ -144,6 +143,64 @@
 \newcommand{\seq}[1]{\left<#1\right>}
 \newcommand{\co}[1]{\left[#1\right]}
 \newcommand{\cc}[1]{\left(#1\right)}
+
+
+
+%%%%%%%%
+\usepackage[capbesideposition={top,outside},
+facing=yes,capbesidesep=quad]{floatrow}
+
+\usepackage[innercaption]{sidecap}
+\sidecaptionvpos{figure}{t}
+
+\usepackage{float}
+\let\origfigure=\figure
+\let\endorigfigure=\endfigure
+\renewenvironment{figure}[1][]{%
+  \origfigure[H]
+}{%
+  \endorigfigure
+}
+
+
+\usepackage{amsthm}
+\newtheoremstyle{slplain}% name
+  {0.5em plus 0.01em minus 0.01em}% Space above
+  {0em plus 0.01em minus 0.01em}% Space below
+  {\slshape}% Body font
+  {}%Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}%  Thm head font
+  {.}%       Punctuation after thm head
+  { }%      Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%       Thm head spec
+
+
+\theoremstyle{slplain}
+\newtheorem{thm}[equation]{Theorem}  % Numbered with the equation counter
+\newtheorem{cor}[equation]{Corollary}     
+\newtheorem{lem}[equation]{Lemma}         
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{corollary}{Corolario}[chapter]
+\newtheorem{proposition}{Proposición}[chapter]
+\newtheorem{conjecture}{Conjectura}[chapter]
+\newtheorem{definition}{Definición}[chapter]
+\newtheorem{example}{Ejemplo}[chapter]
+\newtheorem{exercise}{Ejercicio}[chapter]
+\newtheorem*{remark}{Observación}
+\newtheorem*{solution}{\emph{Solución}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xpatch}%space equation
+\xapptocmd\normalsize{%
+\abovedisplayskip=0.5em plus 0.01em minus 0.01em
+\abovedisplayshortskip=0.5em plus 0.01em minus 0.01em
+\belowdisplayskip=0.5em plus 0.01em minus 0.01em
+\belowdisplayshortskip=0.5em plus 0.01em minus 0.01em
+}{}{}
+%%%%%%%%%%%%%%%%%%%%%
 % https://github.com/rstudio/rmarkdown/issues/337
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
@@ -167,21 +224,6 @@
 \author{MALLQUI BAÑOS Ricardo Michel}
 \date{2020-02-27}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Teorema}[chapter]
-\newtheorem{lemma}{Lema}[chapter]
-\newtheorem{corollary}{Corolario}[chapter]
-\newtheorem{proposition}{Proposición}[chapter]
-\newtheorem{conjecture}{Conjectura}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definición}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Ejemplo}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Ejercicio}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Observación}
-\newtheorem*{solution}{Solución}
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
 \maketitle
@@ -294,9 +336,12 @@ La ecuación de la recta tangente en \(P_0=(x_0,y_0)\) (\(P=P_0\) en el gráfico
 \hypertarget{paruxe1bolas}{%
 \chapter{Parábolas}\label{paruxe1bolas}}
 
-Sean la recta \(\mathcal{L}\) y el punto \(F\) fijos; los puntos \(P\) que satisfacen \[d\left[P;F\right]=d\left[P;\mathcal{L}\right]=\left|p\right|\] la excentricidad es el cociente de estas dos distancias igual a \(1\).
+Sean la recta \(\mathcal{L}\) y el punto \(F\) fijos; los puntos \(P\) que satisfacen la ecuación
+\begin{equation} 
+d\left[P;F\right]=d\left[P;\mathcal{L}\right]=\left|p\right|\label{eq:www}
+\end{equation} generan una curva llamada \emph{parábola}, la excentricidad es el cociente de estas dos distancias que es igual a \(1\) pues ambas son iguales a \(\left|p\right|\).
 
-\(\mathcal{L}\) es la recta directriz cuya ecuación es \(x'=-p\); \(F\) es el foco; \(V=(h,k)\) vértice, \(p\) parámetro de la parábola ; \(RR'\) lado recto de la parábola.
+\(\mathcal{L}\) es la \emph{recta directriz} cuya ecuación es \(x'=-p\) en el sistema \(x'y'\); \(F\) es el \emph{foco}, \(V=(h,k)\) el \emph{vertice}; \(p\) es el parámetro de la parábola; y \(RR'\) el \emph{lado recto} de la parábola.
 
 \begin{figure}
 
@@ -307,12 +352,17 @@ Sean la recta \(\mathcal{L}\) y el punto \(F\) fijos; los puntos \(P\) que satis
 \caption{Elipse vectorial}\label{fig:hiperbola1}
 \end{figure}
 
-\(P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp\) \(x'=[(x,y)-V]\vec{u}\) y \(y'=[(x,y)-V]\vec{u}^\perp\)
-
-\(\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}\); \(F=V+p\vec{u}\) luego \[d[P;\mathcal{L}]=\left|\text{Cp}_{\vec{u}}\vec{PQ}\right|=\left|(Q-P)\cdot\vec{u}\right|=\left|x'+p\right|\]
-
-\[d[P;F]=\left|P-F\right|=\left|(x'-p)\vec{u}+y'\vec{u}^\perp\right|\] por lo tanto
-
+Los puntos \(P\) en el sistema \(x'y'\) satisfacen
+\(P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp\) de donde al despejar \(x'\) e \(y'\) resultan \(x'=[(x,y)-V]\vec{u}\) e \(y'=[(x,y)-V]\vec{u}^\perp\)
+la recta directriz en el sitema \(x'y'\) es
+\(\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}\); donde el vértice es \(F=V+p\vec{u}\) luego se tiene la ecuación
+\begin{equation}
+d[P;\mathcal{L}]=\left|\text{Cp}_{\vec{u}}\vec{PQ}\right|=\left|(Q-P)\cdot\vec{u}\right|=\left|x'+p\right|\label{eq:1w}
+\end{equation}
+\begin{equation}
+d[P;F]=\left|P-F\right|=\left|(x'-p)\vec{u}+y'\vec{u}^{\perp}\right|\label{eq:2w}
+\end{equation}
+por lo tanto reemplazando \eqref{eq:1w} y \eqref{eq:2w} en \eqref{eq:www}
 \begin{align*}
 d\left[P;F\right]^2=d\left[P;\mathcal{L}\right]^2
 & \implies \left|(x'+p)\vec{u}+y'\vec{u}^\perp\right|^2=\left|x'+p\right|^2 \\
@@ -328,31 +378,31 @@ Cuando el eje es paralelo al eje \(y\); \(\vec{u}=j=(0,1)\) entonces \((x,y)=V+x
 
 La ecuación de la recta tangente a \(y^2=4px\) en el punto \(P_0=(x_0,y_0)\) está dada por \(y=\frac{2p}{y_0}(x+x_0)\) y la ecuación de la recta tangente a \((y-k)^2=4p(x-h)\) en el punto \(P_0=(x_0,y_0)\) está dada por \((y_0-k)(x_0-k)=4p\left[\left(\frac{x+x_0}{2}-h\right)\right]\) similarmente la ecuación de la recta tangente a \((x-h)^2=4p(y-k)\) en el punto \(P_0=(x_0,y_0)\) está dada por \((x_0-h)(x_0-h)=4p\left[\left(\frac{y+y_0}{2}-h\right)\right]\).
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Al realizarse una transformacion de coordenadas, el eje de una parabola \(\mathcal{P}\) resulta orientada segun el vector \((3,4)\). En \(x'y'\) un punto \(Q'=(20,-20)'\in\mathcal{P}\) en els sistema \(xy\) el foco de \(\mathcal{P}\) \(E=(11,5)\). Determinar en el sistema \(xy\) un punto \(R\) de la parabola \(\mathcal{P}\) tal que el trinagulo \(QVR\) sea rectangulo en \(V\) vertice de la parábola.
-\item
-  La circunferencia \(\mathcal{C}=(x-3)^2+(y-3)^2=25\) es tangente a una parábola \(\mathcal{P}\) en \(P_0=(x_0,y_0)\), \(y_0>7\). La recta \(\mathcal{L}:4x-3y+12=0\) es normal a \(\mathcal{P}\) y \(\mathcal{C}\) en \(P_0\) y corta al eje focal de \(\mathcal{P}\) en el punto \(R\). Si \(\left|\vec{C_0P_0}\right|=\left|\vec{P_0R}\right|\) y si la distancia \(d[P_0; \text{eje focal}]=4\), hallar la ecuación de la parábola \(\mathcal{P}\). \(C_0\) es el centro de la circunferencia y la absisa del vértice es menor que 6.
-\end{enumerate}
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-2}{}{\label{exr:unnamed-chunk-2} }Al realizarse una transformacion de coordenadas, el eje de una parabola \(\mathcal{P}\) resulta orientada segun el vector \((3,4)\). En \(x'y'\) un punto \(Q'=(20,-20)'\in\mathcal{P}\) en els sistema \(xy\) el foco de \(\mathcal{P}\) \(E=(11,5)\). Determinar en el sistema \(xy\) un punto \(R\) de la parabola \(\mathcal{P}\) tal que el trinagulo \(QVR\) sea rectangulo en \(V\) vertice de la parábola.
+\EndKnitrBlock{exercise}
 
-\(P_0=C_0\pm r\vec{u}_{\mathcal{L}}\) donde \(r=5\), \(C_0=(3,8)\) y \(\vec{u}_{\mathcal{L}}=\frac{(3,4)}{5}\) es decir \(P_0=(3,8)\pm 5\frac{(3,4)}{5}\) de esto consideramos \(P_0=(x_0,y_0)=(6,12)\) por condición del problema con esto la recta tangente a \(\mathcal{C}\) y \(\mathcal{P}\) es \(\mathcal{L}_T:(x,y)(3,4)=(3,4)(6,12)\) equivalentemente \(\mathcal{L}_T:3x+4y=66\).
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-3}{}{\label{exr:unnamed-chunk-3} }La circunferencia \(\mathcal{C}=(x-3)^2+(y-3)^2=25\) es tangente a una parábola \(\mathcal{P}\) en \(P_0=(x_0,y_0)\), \(y_0>7\). La recta \(\mathcal{L}:4x-3y+12=0\) es normal a \(\mathcal{P}\) y \(\mathcal{C}\) en \(P_0\) y corta al eje focal de \(\mathcal{P}\) en el punto \(R\). Si \(\left|\vec{C_0P_0}\right|=\left|\vec{P_0R}\right|\) y si la distancia \(d[P_0; \text{eje focal}]=4\), hallar la ecuación de la parábola \(\mathcal{P}\). \(C_0\) es el centro de la circunferencia y la absisa del vértice es menor que 6.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solución. } \fi{}\(P_0=C_0\pm r\vec{u}_{\mathcal{L}}\) donde \(r=5\), \(C_0=(3,8)\) y \(\vec{u}_{\mathcal{L}}=\frac{(3,4)}{5}\) es decir \(P_0=(3,8)\pm 5\frac{(3,4)}{5}\) de esto consideramos \(P_0=(x_0,y_0)=(6,12)\) por condición del problema con esto la recta tangente a \(\mathcal{C}\) y \(\mathcal{P}\) es \(\mathcal{L}_T:(x,y)(3,4)=(3,4)(6,12)\) equivalentemente \(\mathcal{L}_T:3x+4y=66\).
 
 Ya que \(\left|\vec{C_0P_0}\right|=5=\left|\vec{P_0R}\right|\) y \(d[P_0;\text{eje focal}]=d[P_0; Q]=4\) entonces el triángulo \(P_0QR\) es un triángulo rectángulo notable, por lo tanto \(\left|\vec{QR}\right|=3\) por el Teorema de Pitágoras, además \(\vec{P_0R}=\vec{P_0Q}+\vec{QR}\) es decir si \(\vec{P_0Q}=(v_1,v_2)\) se tiene la ecuacion \((3,4)=4(v_1,v_2)\pm 3(-v_2,v_1)\) que al resolverla se tiene \(\vec{P_0R}=(v_1,v_2)=(1,0)\) o \(\vec{P_0R}=(v_1,v_2)=\left(\frac{24}{25},\frac{7}{25}\right)\) entonces \(Q=P_0+4(0,1)=(6,16)\) o \(Q=P_0+4\left(\frac{24}{25},\frac{7}{25}\right)=\left(6+\frac{96}{25},12+\frac{28}{25}\right)\) esto indica considerar \(Q=(6,16)\) pues el vertice (tiene absisa menor que 6), debe estar a la derecha de \(P_0\) pues la recta \(\mathcal{L}_T\) tiene pendiente negativa. Por lo tanto \(\mathcal{L}_T\cap \mathcal{F}:x=16=(\frac{2}{3},16)\) y por propiedad de la tangente a una parábola se tiene el vértice \(V=\left(\frac{\mathcal{L}_T\cap \mathcal{F}+Q}{2}\right)=\left(\frac{10}{3}, 16\right)\). La ecuación de la parabola en le sistema original es \((y-h)^2=4\rho(x-k)\) donde \((h,k)=\left(\frac{10}{3}, 16\right)\) y \((6,12)\in\mathcal{P}\) se tiene \((-4)^2=4\rho(8/3)\) de donde \(\rho=\frac{3}{2}\) entonces la recta directriz pasa por \(\left(\frac{10}{3}, 16\right)+\frac{3}{2}(1,0)=\left(\frac{7}{3}, 16\right)\) por tanto \(\mathcal{L}_D:x=\frac{7}{3}\) y la ecuacion de la parábola es \[(y-16)^2=4\rho\left(x-\frac{10}{3}\right)\] por ser paralela al eje \(x.\)
+\EndKnitrBlock{solution}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Los puntos \(A=(60,13)\) y \(B=(-4,61)\) estan sobre una parábola \(\mathcal{P}\) además son simétricos con recpecto al eje focal. Desde un punto \(Q\) sobre el eje focal se traza un recta tangente a \(\mathcal{P}\) que pasa por \(B,\) hallar la ecuación de \(\mathcal{P}\) y las ecuaciones de las rectas tangentes trazadas desde \(Q\).
-\end{enumerate}
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-5}{}{\label{exr:unnamed-chunk-5} }Los puntos \(A=(60,13)\) y \(B=(-4,61)\) estan sobre una parábola \(\mathcal{P}\) además son simétricos con recpecto al eje focal. Desde un punto \(Q\) sobre el eje focal se traza un recta tangente a \(\mathcal{P}\) que pasa por \(B,\) hallar la ecuación de \(\mathcal{P}\) y las ecuaciones de las rectas tangentes trazadas desde \(Q\).
+\EndKnitrBlock{exercise}
 
-Ya que \(A\) y \(B\) son simétricas entonces \(P_0=\frac{A+B}{2}=(28,37) \in \mathcal{L}_F\) donde \(\mathcal{L}_F\) es el eje focal paralelo al vector \(\vec{AB}^\perp=(B-A)^\perp=(-64,48)\parallel(-4,3)=\vec{v}_L\) es decir \(\vec{v}_F\) y \(P_0\) nos genera la ecuación del eje focal \(\mathcal{L}_F:4x+3y=1\). De otro lado dado el punto \(Q=(20,x)\in\mathcal{L}_F\) que al reemplazarlo en la recta del eje focal nos genera \(x=-27\) de donde \(Q=(20,-27)\) ademas el vértice de la parabola es \(V=\frac{Q+P_0}{2}=(4,5)\) por propiedad.
+\BeginKnitrBlock{solution}
+\iffalse{} {Solución. } \fi{}Ya que \(A\) y \(B\) son simétricas entonces \(P_0=\frac{A+B}{2}=(28,37) \in \mathcal{L}_F\) donde \(\mathcal{L}_F\) es el eje focal paralelo al vector \(\vec{AB}^\perp=(B-A)^\perp=(-64,48)\parallel(-4,3)=\vec{v}_L\) es decir \(\vec{v}_F\) y \(P_0\) nos genera la ecuación del eje focal \(\mathcal{L}_F:4x+3y=1\). De otro lado dado el punto \(Q=(20,x)\in\mathcal{L}_F\) que al reemplazarlo en la recta del eje focal nos genera \(x=-27\) de donde \(Q=(20,-27)\) ademas el vértice de la parabola es \(V=\frac{Q+P_0}{2}=(4,5)\) por propiedad.
 
 Con el objetivo de hallar el valor de \(\rho\) en la ecuación \(y'^2=4\rho x'\) se halla las coordenadas de \(B\) en el nuevo sistema de coordenadas centrada en \(V\) con vector director \(\vec{u}=\frac{(3,4)}{5}\), haciendo uso de la relación \[(x,y)=V+x'\vec{u}+y'\vec{u}^\perp\] se obtiene \(x'=\left[B-V\right]\vec{u}=40\) y \(y'=\left[B-V\right]\vec{u}^\perp=40\) por tanto reemplazando \(B=(-4,61)=(40,40)'\) en \(y'^2=4\rho x'\) se tiene que \(\rho=10\)
 
 Los vectores directores de las rectas tangentes en el sistema \(x'y'\) son \((2,1)\) y \((2,-1)\) respectivamente por tanto sus ecuaciones son \(\mathcal{L}_A: 2y'=x'+40\) y \(\mathcal{L}_B=-2y'=x'+40\) estas ecuaciones en el sistema original con \(x'=\left[(x,y)-(4,5)\right]\frac{(3,4)}{5}\) y \(y'=\left[(x,y)-(4,5)\right]\frac{(-4,3)}{5}\) reemplazadas resultan \(\mathcal{L}_A:2y-11x-166=0\) y \(\mathcal{L}_B:5x-10y-170=0\)
+\EndKnitrBlock{solution}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -364,21 +414,19 @@ Los vectores directores de las rectas tangentes en el sistema \(x'y'\) son \((2,
 \hypertarget{elipse}{%
 \chapter{Elipse}\label{elipse}}
 
-\[\epsilon_1^7\]
-
 \begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
+f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+\label{eq:binom}
 \end{equation}
 \eqref{eq:binom}
 
 \BeginKnitrBlock{corollary}
-\protect\hypertarget{cor:unnamed-chunk-2}{}{\label{cor:unnamed-chunk-2} }The characteristic function of the sum of two independent random variables \(X_1\) and \(X_2\) is the product of characteristic functions of \(X_1\) and \(X_2\), i.e.,
+\protect\hypertarget{cor:unnamed-chunk-7}{}{\label{cor:unnamed-chunk-7} }The characteristic function of the sum of two independent random variables \(X_1\) and \(X_2\) is the product of characteristic functions of \(X_1\) and \(X_2\), i.e.,
 \[\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)\]
 \EndKnitrBlock{corollary}
 
 \BeginKnitrBlock{exercise}[Characteristic Function of the Sample Mean]
-\protect\hypertarget{exr:unnamed-chunk-3}{}{\label{exr:unnamed-chunk-3} \iffalse (Characteristic Function of the Sample Mean) \fi{} }Let \(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\) be the sample mean of \(n\) independent and identically distributed random variables, each with characteristic function \(\varphi_{X}.\) Compute the characteristic function of \(\bar{X}\).
+\protect\hypertarget{exr:unnamed-chunk-8}{}{\label{exr:unnamed-chunk-8} \iffalse (Characteristic Function of the Sample Mean) \fi{} }Let \(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\) be the sample mean of \(n\) independent and identically distributed random variables, each with characteristic function \(\varphi_{X}.\) Compute the characteristic function of \(\bar{X}\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}

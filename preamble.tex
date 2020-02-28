@@ -2,7 +2,6 @@
 
 \usepackage[skip=0pt]{caption}
 
-\usepackage{sidecap}
 \renewcommand{\rmdefault}{ptm}
 
 
@@ -80,3 +79,61 @@
 \newcommand{\seq}[1]{\left<#1\right>}
 \newcommand{\co}[1]{\left[#1\right]}
 \newcommand{\cc}[1]{\left(#1\right)}
+
+
+
+%%%%%%%%
+\usepackage[capbesideposition={top,outside},
+facing=yes,capbesidesep=quad]{floatrow}
+
+\usepackage[innercaption]{sidecap}
+\sidecaptionvpos{figure}{t}
+
+\usepackage{float}
+\let\origfigure=\figure
+\let\endorigfigure=\endfigure
+\renewenvironment{figure}[1][]{%
+  \origfigure[H]
+}{%
+  \endorigfigure
+}
+
+
+\usepackage{amsthm}
+\newtheoremstyle{slplain}% name
+  {0.5em plus 0.01em minus 0.01em}% Space above
+  {0em plus 0.01em minus 0.01em}% Space below
+  {\slshape}% Body font
+  {}%Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}%  Thm head font
+  {.}%       Punctuation after thm head
+  { }%      Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%       Thm head spec
+
+
+\theoremstyle{slplain}
+\newtheorem{thm}[equation]{Theorem}  % Numbered with the equation counter
+\newtheorem{cor}[equation]{Corollary}     
+\newtheorem{lem}[equation]{Lemma}         
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{corollary}{Corolario}[chapter]
+\newtheorem{proposition}{Proposición}[chapter]
+\newtheorem{conjecture}{Conjectura}[chapter]
+\newtheorem{definition}{Definición}[chapter]
+\newtheorem{example}{Ejemplo}[chapter]
+\newtheorem{exercise}{Ejercicio}[chapter]
+\newtheorem*{remark}{Observación}
+\newtheorem*{solution}{\emph{Solución}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xpatch}%space equation
+\xapptocmd\normalsize{%
+\abovedisplayskip=0.5em plus 0.01em minus 0.01em
+\abovedisplayshortskip=0.5em plus 0.01em minus 0.01em
+\belowdisplayskip=0.5em plus 0.01em minus 0.01em
+\belowdisplayshortskip=0.5em plus 0.01em minus 0.01em
+}{}{}
+%%%%%%%%%%%%%%%%%%%%%
