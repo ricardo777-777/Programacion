@@ -1,4 +1,4 @@
-# Parábolas
+# Parábola
 Sean la recta $\mathcal{L}$  y el punto $F$ fijos; los puntos $P$ que satisfacen la ecuación 
 \begin{equation} 
 d\left[P;F\right]=d\left[P;\mathcal{L}\right]=\left|p\right|(\#eq:www)
@@ -14,7 +14,7 @@ knitr::include_graphics("parabola.svg")
 Los puntos $P$ en el sistema $x'y'$ satisfacen 
 $P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp$ de donde al despejar $x'$ e $y'$ resultan $x'=[(x,y)-V]\vec{u}$ e $y'=[(x,y)-V]\vec{u}^\perp$
 la recta directriz en el sitema $x'y'$ es 
-$\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}$; donde el vértice es $F=V+p\vec{u}$ luego se tiene la ecuación 
+$\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}$; donde el vértice es $F=V+p\vec{u}$ luego se tiene las ecuaciónes
 \begin{equation}
 d[P;\mathcal{L}]=\left|\text{Cp}_{\vec{u}}\vec{PQ}\right|=\left|(Q-P)\cdot\vec{u}\right|=\left|x'+p\right|(\#eq:1w)
 \end{equation}
@@ -29,13 +29,31 @@ d\left[P;F\right]^2=d\left[P;\mathcal{L}\right]^2
 &\implies y'^2=4px'
 \end{align*}
 
-De este modo $P\in\mathcal{P}$ si $P$ satisface la ecuacion vectorial $$P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp;\: \text{donde } y'^2=4px'; \:\left|\vec{u}\right|=1$$
+De este modo $P\in\mathcal{P}$ si $P$ satisface la _ecuacion vectorial_ de $\mathcal{P}$ $$P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp;\: \text{donde } y'^2=4px'; \:\left|\vec{u}\right|=1$$
 
-Cuando el eje es paralelo al eje $x$; $\vec{u}=i=(1,0)$ entonces $(x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h+x',k+y')\implies x'=x-h$ y $y'=y-k$ en $y'^2=4px'$ resulta $(y-k)^2=4p(x-h)$ ($y^2=4px$ si $V$ está en el origen); entonces $F=V+p\vec{u}=(h+p,k)$; $\mathcal{L}: x=h-p$. Si $p<1$ la parábola se invierte simétricamente a la directriz.
+Cuando el eje es paralelo al eje $x$; se tiene $\vec{u}=i=(1,0)$ entonces $$(x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h+x',k+y')$$ implica $x'=x-h$ y $y'=y-k$ en $y'^2=4px'$ resulta $(y-k)^2=4p(x-h)$ ($y^2=4px$ si $V$ está en el origen); entonces $F=V+p\vec{u}=(h+p,k)$; $\mathcal{L}: x=h-p$. Si $p<1$ la parábola se invierte simétricamente a la directriz.
 
-Cuando el eje es paralelo al eje $y$; $\vec{u}=j=(0,1)$ entonces $(x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h-y',k+x')\implies x'=y-k$ y $y'=h-x$ en $y'^2=4px'$ resulta $(x-h)^2=4p(y-k)$ ($x^2=4py$ si $V$ está en el origen); entonces $F=V+p\vec{u}=(h,k+p)$; $\mathcal{L}: x=k-p$. Si $p<1$ la parábola se invierte simétricamente a la directriz.
+Cuando el eje es paralelo al eje $y$; $\vec{u}=j=(0,1)$ entonces $$(x,y)=V+x'\vec{u}+y'\vec{u}^\perp=(h-y',k+x')$$ implica $x'=y-k$ y $y'=h-x$ en $y'^2=4px'$ resulta $(x-h)^2=4p(y-k)$ ($x^2=4py$ si $V$ está en el origen); entonces $F=V+p\vec{u}=(h,k+p)$; $\mathcal{L}: x=k-p$. Si $p<1$ la parábola se invierte simétricamente a la directriz.
 
-La ecuación de la recta tangente a $y^2=4px$ en el punto $P_0=(x_0,y_0)$ está dada por $y=\frac{2p}{y_0}(x+x_0)$ y la ecuación de la recta tangente a $(y-k)^2=4p(x-h)$ en el punto $P_0=(x_0,y_0)$ está dada por $(y_0-k)(x_0-k)=4p\left[\left(\frac{x+x_0}{2}-h\right)\right]$ similarmente la ecuación de la recta tangente a $(x-h)^2=4p(y-k)$ en el punto $P_0=(x_0,y_0)$ está dada por $(x_0-h)(x_0-h)=4p\left[\left(\frac{y+y_0}{2}-h\right)\right]$.
+```{theorem, name="Ecuaciones de la recta tangente de una parábola"}
+La ecuación de la recta tangente a $y^2=4px$ en el punto $P_0=(x_0,y_0)$ está dada por
+\begin{equation}
+y=\frac{2p}{y_0}(x+x_0)
+(\#eq:w1)
+\end{equation}
+y la ecuación de la recta tangente a $(y-k)^2=4p(x-h)$ en el punto $P_0=(x_0,y_0)$ está dada por
+\begin{equation}
+(y_0-k)(x_0-k)=4p\left[\left(\frac{x+x_0}{2}-h\right)\right]
+(\#eq:w2)
+\end{equation}
+similarmente la ecuación de la recta tangente a $(x-h)^2=4p(y-k)$ en el punto $P_0=(x_0,y_0)$ está dada por \begin{equation}
+(x_0-h)(x_0-h)=4p\left[\left(\frac{y+y_0}{2}-h\right)\right].
+(\#eq:w3)
+\end{equation}
+```
+```{proof}
+En efecto sea ...
+```
 
 
 
