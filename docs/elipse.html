@@ -97,8 +97,30 @@
             <section class="normal" id="section-">
 <div id="elipse" class="section level1">
 <h1><span class="header-section-number">Capítulo 6</span> Elipse</h1>
-<p><span class="math display">\[\epsilon_1^7\]</span>
-Dados dos puntos distintos <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> llamados focos; la elipse <span class="math inline">\(\mathcal{E}\)</span> es el conjunto formado por los puntos <span class="math inline">\(P\)</span> que satisfacen la ecuacion <span class="math display">\[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]</span></p>
+<p><span class="math display">\[\epsilon_1^7\]</span></p>
+<p><span class="math display" id="eq:binom">\[\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \tag{6.1}
+\end{equation}\]</span>
+<a href="elipse.html#eq:binom">(6.1)</a></p>
+
+<div class="corollary">
+<span id="cor:unnamed-chunk-2" class="corollary"><strong>Corolario 6.1  </strong></span>The characteristic function of the sum of two independent random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> is the product of characteristic functions of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>, i.e.,
+<span class="math display">\[\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)\]</span>
+</div>
+
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-3" class="exercise"><strong>Ejercicio 6.1  (Characteristic Function of the Sample Mean)  </strong></span>Let <span class="math inline">\(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\)</span> be the sample mean of <span class="math inline">\(n\)</span> independent and identically distributed random variables, each with characteristic function <span class="math inline">\(\varphi_{X}.\)</span> Compute the characteristic function of <span class="math inline">\(\bar{X}\)</span>.
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solución. </em></span> Applying Theorem, we have
+<span class="math display">\[\varphi _{\bar{X}}(t)=\prod_{i=1}^n \varphi _{X_i}\left(\frac{t}{n}\right)=\left[\varphi _{X}\left(\frac{t}{n}\right)\right]^n.\]</span>
+</div>
+
+<p>Dados dos puntos distintos <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> llamados focos; la elipse <span class="math inline">\(\mathcal{E}\)</span> es el conjunto formado por los puntos <span class="math inline">\(P\)</span> que satisfacen la ecuacion <span class="math display">\[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]</span></p>
 <span class="math inline">\(C=(h,k)\)</span> es el centro de la elipse; <span class="math inline">\(x&#39;\)</span> eje focal, <span class="math inline">\(V_1\)</span> y <span class="math inline">\(V_2\)</span> son los vértices de la elipse; <span class="math inline">\(\overline{V_1V_2}\)</span> el eje mayor <span class="math inline">\(\overline{RR&#39;}\)</span> el lado recto; <span class="math inline">\(\overline{B_1B_2}\)</span> el eje menor de longitud <span class="math inline">\(2b\)</span>. En el sistema <span class="math inline">\(x&#39;y&#39;\)</span> se tiene <span class="math inline">\(B_1=(0,b)&#39;\)</span>; <span class="math inline">\(B_2=(0,-b)&#39;\)</span>; <span class="math inline">\(F_1=(-c,0)&#39;\)</span>; <span class="math inline">\(F_2=(c,0)&#39;\)</span> y <span class="math inline">\(C=(0,0)&#39;\)</span>.
 <div class="figure" style="text-align: center"><span id="fig:pressure1"></span>
 <img src="elipse.svg" alt="Elipse vectorial"  />

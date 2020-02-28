@@ -7,3 +7,16 @@
     label:
       fig: "Figura "
       tab: "Tabla "
+      eq: 'Ecuación '
+      thm: 'Teorema '
+      lem: 'Lema '
+      cor: 'Corolario '
+      prp: 'Proposición '
+      cnj: 'Conjectura '
+      def: 'Definición '
+      exm: 'Ejemplo '
+      exr: 'Ejercicio '
+      proof: 'Demostracion. '
+      remark: 'Observación. '
+      solution: 'Solución. '
+ 

@@ -1,5 +1,26 @@
 # Elipse
-$$\epsilon_1^7$$
+$$\epsilon_1^7$$ 
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation} 
+\@ref(eq:binom)
+
+```{corollary}
+The characteristic function of the sum of two independent random variables $X_1$ and $X_2$ is the product of characteristic functions of $X_1$ and $X_2$, i.e.,
+$$\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)$$
+```
+
+```{exercise, name="Characteristic Function of the Sample Mean"}
+Let $\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i$ be the sample mean of $n$ independent and identically distributed random variables, each with characteristic function $\varphi_{X}.$ Compute the characteristic function of $\bar{X}$. 
+```
+
+```{solution}
+Applying Theorem, we have
+$$\varphi _{\bar{X}}(t)=\prod_{i=1}^n \varphi _{X_i}\left(\frac{t}{n}\right)=\left[\varphi _{X}\left(\frac{t}{n}\right)\right]^n.$$
+```  
+  
 Dados dos puntos distintos $F_1$ y $F_2$ llamados focos; la elipse $\mathcal{E}$ es el conjunto formado por  los puntos $P$ que satisfacen la ecuacion  $$\left|P-F_1\right|+\left|P-F_2\right|=2a.$$
 
 $C=(h,k)$ es el centro de la elipse; $x'$ eje focal, $V_1$ y $V_2$ son los vértices de la elipse; $\overline{V_1V_2}$ el eje mayor $\overline{RR'}$ el lado recto; $\overline{B_1B_2}$ el eje menor de longitud $2b$. En el sistema $x'y'$ se tiene $B_1=(0,b)'$; $B_2=(0,-b)'$; $F_1=(-c,0)'$; $F_2=(c,0)'$  y $C=(0,0)'$. 

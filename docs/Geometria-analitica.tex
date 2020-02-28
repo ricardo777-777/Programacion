@@ -71,7 +71,7 @@
 
 
 \usepackage{amsmath}		
-%\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage[a4paper]{geometry}
@@ -168,20 +168,20 @@
 \date{2020-02-27}
 
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{corollary}{Corolario}[chapter]
+\newtheorem{proposition}{Proposición}[chapter]
+\newtheorem{conjecture}{Conjectura}[chapter]
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
+\newtheorem{definition}{Definición}[chapter]
 \theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
+\newtheorem{example}{Ejemplo}[chapter]
 \theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{exercise}{Ejercicio}[chapter]
 \theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Observación}
+\newtheorem*{solution}{Solución}
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
 \maketitle
@@ -365,6 +365,27 @@ Los vectores directores de las rectas tangentes en el sistema \(x'y'\) son \((2,
 \chapter{Elipse}\label{elipse}}
 
 \[\epsilon_1^7\]
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \label{eq:binom}
+\end{equation}
+\eqref{eq:binom}
+
+\BeginKnitrBlock{corollary}
+\protect\hypertarget{cor:unnamed-chunk-2}{}{\label{cor:unnamed-chunk-2} }The characteristic function of the sum of two independent random variables \(X_1\) and \(X_2\) is the product of characteristic functions of \(X_1\) and \(X_2\), i.e.,
+\[\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)\]
+\EndKnitrBlock{corollary}
+
+\BeginKnitrBlock{exercise}[Characteristic Function of the Sample Mean]
+\protect\hypertarget{exr:unnamed-chunk-3}{}{\label{exr:unnamed-chunk-3} \iffalse (Characteristic Function of the Sample Mean) \fi{} }Let \(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\) be the sample mean of \(n\) independent and identically distributed random variables, each with characteristic function \(\varphi_{X}.\) Compute the characteristic function of \(\bar{X}\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solución. } \fi{}Applying Theorem, we have
+\[\varphi _{\bar{X}}(t)=\prod_{i=1}^n \varphi _{X_i}\left(\frac{t}{n}\right)=\left[\varphi _{X}\left(\frac{t}{n}\right)\right]^n.\]
+\EndKnitrBlock{solution}
+
 Dados dos puntos distintos \(F_1\) y \(F_2\) llamados focos; la elipse \(\mathcal{E}\) es el conjunto formado por los puntos \(P\) que satisfacen la ecuacion \[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]
 
 \(C=(h,k)\) es el centro de la elipse; \(x'\) eje focal, \(V_1\) y \(V_2\) son los vértices de la elipse; \(\overline{V_1V_2}\) el eje mayor \(\overline{RR'}\) el lado recto; \(\overline{B_1B_2}\) el eje menor de longitud \(2b\). En el sistema \(x'y'\) se tiene \(B_1=(0,b)'\); \(B_2=(0,-b)'\); \(F_1=(-c,0)'\); \(F_2=(c,0)'\) y \(C=(0,0)'\).
