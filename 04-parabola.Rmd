@@ -46,11 +46,14 @@ y la ecuación de la recta tangente a $(y-k)^2=4p(x-h)$ en el punto $P_0=(x_0,y_
 (y_0-k)(x_0-k)=4p\left[\left(\frac{x+x_0}{2}-h\right)\right]
 (\#eq:w2)
 \end{equation}
-similarmente la ecuación de la recta tangente a $(x-h)^2=4p(y-k)$ en el punto $P_0=(x_0,y_0)$ está dada por \begin{equation}
+similarmente la ecuación de la recta tangente a $(x-h)^2=4p(y-k)$ en el punto $P_0=(x_0,y_0)$ está dada por 
+\begin{equation}
 (x_0-h)(x_0-h)=4p\left[\left(\frac{y+y_0}{2}-h\right)\right].
 (\#eq:w3)
 \end{equation}
+
 ```
+
 ```{proof}
 En efecto sea ...
 ```

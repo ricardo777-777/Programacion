@@ -16,10 +16,10 @@ git config --global user.email "ricardomallqui6@gmail.com"
 git config --global user.name "ricardofisma"
 -->
 # Algebra vectorial
-Sea la la realcion oportuna entre los demas opciones conseguir una de las acciones consistentes de elegirla ecuacion anterior porque se desea que las equivalencias sean congruentes es decir que las deducciones sean logicas y buenas de acuerdo a ls opciones de la gente que debe tener en cuenta las demas opciones congruentes. $$\frac{\rho\vec{r}}{\left(\int_1^2\right)}$$
-## Datos
-Sean los datos que se prosiguen
+El capitulo tratasobre _vectores_ y las operaciones en este conjunto
 
+## Sitema de coordenadas cartesianas o rectangulares
+Este sitema esta compuesto por un palno y dos rectas mutuamente perpendiculares. A cada punto  $P$  se le asocia un paraordenado de numeros reales $P=(x,y)$ donde los números $x$ e $y$ estan ubicadas sobre los ejes $X$ e $Y$ respectivamente.
 * www
 * wwwww
 
