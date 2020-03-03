@@ -1,8 +1,11 @@
 # Parábola
-Sean la recta $\mathcal{L}$  y el punto $F$ fijos; los puntos $P$ que satisfacen la ecuación 
+Sean la recta $\mathcal{L}$  y el punto $F$ fijos; los puntos $P$ que satisfacen la ecuación
+
 \begin{equation} 
 d\left[P;F\right]=d\left[P;\mathcal{L}\right]=\left|p\right|(\#eq:www)
-\end{equation} generan una curva llamada _parábola_, la excentricidad es el cociente de estas dos distancias que es igual a $1$ pues ambas son iguales a $\left|p\right|$.
+\end{equation} 
+
+generan una curva llamada _parábola_, la excentricidad es el cociente de estas dos distancias que es igual a $1$ pues ambas son iguales a $\left|p\right|$.
 
 $\mathcal{L}$ es  la  _recta directriz_ cuya ecuación es $x'=-p$ en el sistema $x'y'$;  $F$ es el _foco_, $V=(h,k)$ el _vertice_; $p$ es el parámetro de la parábola; y $RR'$ el _lado recto_ de la parábola.
 
@@ -15,12 +18,15 @@ Los puntos $P$ en el sistema $x'y'$ satisfacen
 $P=(x,y)=V+x'\vec{u}+y'\vec{u}^\perp$ de donde al despejar $x'$ e $y'$ resultan $x'=[(x,y)-V]\vec{u}$ e $y'=[(x,y)-V]\vec{u}^\perp$
 la recta directriz en el sitema $x'y'$ es 
 $\mathcal{L}=\left\{Q/Q=(V-p\vec{u})+t\vec{u}^\perp,\:t\in \mathbb{R}\right\}$; donde el vértice es $F=V+p\vec{u}$ luego se tiene las ecuaciónes
+
 \begin{equation}
 d[P;\mathcal{L}]=\left|\text{Cp}_{\vec{u}}\vec{PQ}\right|=\left|(Q-P)\cdot\vec{u}\right|=\left|x'+p\right|(\#eq:1w)
 \end{equation}
+
 \begin{equation}
 d[P;F]=\left|P-F\right|=\left|(x'-p)\vec{u}+y'\vec{u}^{\perp}\right|(\#eq:2w)
 \end{equation}
+
 por lo tanto reemplazando \@ref(eq:1w) y \@ref(eq:2w) en \@ref(eq:www)
 \begin{align*}
 d\left[P;F\right]^2=d\left[P;\mathcal{L}\right]^2

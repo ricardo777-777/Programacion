@@ -23,3 +23,21 @@ h1, h2, h3, h4, h5 { font-family: serif;
 .book .book-body .page-wrapper .page-inner section.normal h3{font-size:1em}
 .book .book-body .page-wrapper .page-inner section.normal h4{font-size:1em}
 .book .book-body .page-wrapper .page-inner section.normal h5{font-size:1em}
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {color: "#CCCCCC"}} 
+      }
+});
+</script>

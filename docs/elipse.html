@@ -24,7 +24,7 @@
 <meta name="author" content="MALLQUI BAÑOS Ricardo Michel" />
 
 
-<meta name="date" content="2020-02-27" />
+<meta name="date" content="2020-03-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -99,39 +99,63 @@
             <section class="normal" id="section-">
 <div id="elipse" class="section level1">
 <h1><span class="header-section-number">Capítulo 6</span> Elipse</h1>
-<p><span class="math display" id="eq:binom">\[\begin{equation} 
-f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+<p>Dados dos puntos distintos <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> llamados focos; la elipse <span class="math inline">\(\mathcal{E}\)</span> es el conjunto formado por los puntos <span class="math inline">\(P\)</span> que satisfacen la ecuacion
+<span class="math display" id="eq:binom">\[\begin{equation} 
+\left|P-F_1\right|+\left|P-F_2\right|=2a
 \tag{6.1}
-\end{equation}\]</span>
-<a href="elipse.html#eq:binom">(6.1)</a></p>
-
-<div class="corollary">
-<span id="cor:unnamed-chunk-9" class="corollary"><strong>Corolario 6.1  </strong></span>The characteristic function of the sum of two independent random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> is the product of characteristic functions of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>, i.e.,
-<span class="math display">\[\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)\]</span>
-</div>
-
-
-<div class="exercise">
-<span id="exr:unnamed-chunk-10" class="exercise"><strong>Ejercicio 6.1  (Characteristic Function of the Sample Mean)  </strong></span>Let <span class="math inline">\(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\)</span> be the sample mean of <span class="math inline">\(n\)</span> independent and identically distributed random variables, each with characteristic function <span class="math inline">\(\varphi_{X}.\)</span> Compute the characteristic function of <span class="math inline">\(\bar{X}\)</span>.
-</div>
-
-
-<div class="solution">
- <span class="solution"><em>Solución. </em></span> Applying Theorem, we have
-<span class="math display">\[\varphi _{\bar{X}}(t)=\prod_{i=1}^n \varphi _{X_i}\left(\frac{t}{n}\right)=\left[\varphi _{X}\left(\frac{t}{n}\right)\right]^n.\]</span>
-</div>
-
-<p>Dados dos puntos distintos <span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_2\)</span> llamados focos; la elipse <span class="math inline">\(\mathcal{E}\)</span> es el conjunto formado por los puntos <span class="math inline">\(P\)</span> que satisfacen la ecuacion <span class="math display">\[\left|P-F_1\right|+\left|P-F_2\right|=2a.\]</span></p>
-<span class="math inline">\(C=(h,k)\)</span> es el centro de la elipse; <span class="math inline">\(x&#39;\)</span> eje focal, <span class="math inline">\(V_1\)</span> y <span class="math inline">\(V_2\)</span> son los vértices de la elipse; <span class="math inline">\(\overline{V_1V_2}\)</span> el eje mayor <span class="math inline">\(\overline{RR&#39;}\)</span> el lado recto; <span class="math inline">\(\overline{B_1B_2}\)</span> el eje menor de longitud <span class="math inline">\(2b\)</span>. En el sistema <span class="math inline">\(x&#39;y&#39;\)</span> se tiene <span class="math inline">\(B_1=(0,b)&#39;\)</span>; <span class="math inline">\(B_2=(0,-b)&#39;\)</span>; <span class="math inline">\(F_1=(-c,0)&#39;\)</span>; <span class="math inline">\(F_2=(c,0)&#39;\)</span> y <span class="math inline">\(C=(0,0)&#39;\)</span>.
+\end{equation}\]</span></p>
+<span class="math inline">\(C=(h,k)\)</span> es el centro de la elipse; <span class="math inline">\(x&#39;\)</span> eje focal, <span class="math inline">\(V_1\)</span> y <span class="math inline">\(V_2\)</span> son los vértices de la elipse; <span class="math inline">\(\overline{V_1V_2}\)</span> el eje mayor <span class="math inline">\(\overline{RR&#39;}\)</span> el lado recto; <span class="math inline">\(\overline{B_1B_2}\)</span> el eje menor de longitud <span class="math inline">\(2b\)</span>. En el sistema <span class="math inline">\(X&#39;Y&#39;\)</span> se tiene <span class="math inline">\(B_1=(0,b)&#39;\)</span>; <span class="math inline">\(B_2=(0,-b)&#39;\)</span>; <span class="math inline">\(F_1=(-c,0)&#39;\)</span>; <span class="math inline">\(F_2=(c,0)&#39;\)</span> y <span class="math inline">\(C=(0,0)&#39;\)</span>.
 <div class="figure" style="text-align: center"><span id="fig:pressure1"></span>
 <img src="elipse.svg" alt="Elipse vectorial"  />
 <p class="caption">
 Figura 6.1: Elipse vectorial
 </p>
 </div>
-<p>La excentricidad <span class="math inline">\(e\)</span> se define como</p>
-<p><span class="math display">\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}\]</span></p>
-<p><span class="math inline">\(d\left[B_i;F_1\right]=d\left[B_i;F_2\right]= a\)</span> y <span class="math inline">\(d\left[V_i;C\right]=d\left[V_i;C\right]=a\)</span>, <span class="math inline">\(i=1,2\)</span>. <span class="math inline">\(d\left[C;;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{a}{e}\)</span> pues <span class="math inline">\(\frac{d\left[B_i;F_1\right]}{d\left[B_i;\mathcal{L}_1\right]}=e\implies \frac{a}{d\left[B;\mathcal{L}_1\right]}=e\)</span>. Sea <span class="math inline">\(c=d\left[P;F_1\right]=d\left[P;F_2\right]\implies c=ae\)</span> pues <span class="math inline">\(\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e\implies \frac{a-c}{\frac{a}{e}-a}=e \implies c=ae\)</span>. <span class="math inline">\(a&gt;b\)</span> y <span class="math inline">\(a^2=b^2+c^2\)</span>; pues <span class="math inline">\(a=d\left[B_1;F_2\right]=d\left[(0,b^2+c^2)&#39;;(c,0)&#39;\right]^2=\sqrt{b}\)</span>; <span class="math inline">\(0&lt;e&lt;1\)</span> debido a que <span class="math inline">\(0&lt;e=\frac{a}{e}&lt;1\)</span> y <span class="math inline">\(a&gt;c&gt;0\)</span>.</p>
+<p>Dado <span class="math inline">\(P\in \mathcal{E}\)</span>, la excentricidad <span class="math inline">\(e\)</span> se define como</p>
+<p><span class="math display" id="eq:ww">\[\begin{equation}
+\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e=\frac{d\left[P;F_2\right]}{d\left[P;\mathcal{L}_2\right]}
+\tag{6.2}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(d\left[B_i;F_1\right]=d\left[B_i;F_2\right]= a\)</span> y <span class="math inline">\(d\left[V_i;C\right]=d\left[V_i;C\right]=a\)</span>, <span class="math inline">\(i=1,2\)</span>.</p>
+
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-9" class="theorem"><strong>Teorema 6.1  </strong></span>En la elipse se verifican las siguientes igualdades</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(d\left[B_1;F_i\right]=d\left[B_2;F_i\right]=a\)</span></p></li>
+<li><p><span class="math inline">\(d\left[V_1;C\right]=d\left[V_2;C\right]=a\)</span></p></li>
+<li><p><span class="math inline">\(d\left[C;\mathcal{L}_1\right]=d\left[C;\mathcal{L}_2\right]=\frac{c}{e}\)</span></p></li>
+<li><span class="math inline">\(c=d\left[P;F_1\right]=d\left[P;F_2\right]\implies c=ae\)</span></li>
+</ol>
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Demostracion. </em></span> 
+1. Ya que <span class="math inline">\(d\left[B_1;F_1\right]+d\left[B_1;F_2\right]=2a=d\left[B_2;F_1\right]+d\left[B_2;F_2\right]\)</span> es decir <span class="math inline">\(2d\left[B_1;F_i\right]=2a=2d\left[B_2;F_i\right]\)</span> entonces <span class="math inline">\(d\left[B_1;F_i\right]=a=d\left[B_2;F_i\right]\)</span> <span class="math inline">\(i=1,2\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Por la definición <a href="elipse.html#eq:binom">(6.1)</a> de la elipse se tiene
+<span class="math display" id="eq:er">\[\begin{equation}
+d\left[V_1;F_2\right]+d\left[V_1;F_1\right]=2a
+\tag{6.3}
+\end{equation}\]</span>
+además la diferencia
+<span class="math display" id="eq:err">\[\begin{equation}
+d\left[V_1;F_2\right]-d\left[V_1;F_1\right]=2c
+\tag{6.4}
+\end{equation}\]</span>
+restando las ecuaciones <a href="elipse.html#eq:er">(6.3)</a> y <a href="elipse.html#eq:err">(6.4)</a> se tiene
+<span class="math display" id="eq:errr">\[\begin{equation}
+d\left[V_1;F_1\right]=a-c
+\tag{6.5}
+\end{equation}\]</span>
+entonces haciendo uso de <a href="elipse.html#eq:errr">(6.5)</a> en <span class="math inline">\(d\left[V_1;C\right]=d\left[V_1;F_1\right]+d\left[F_1;C\right]=(a-c)+c=a\)</span>; de manera similar para el vértice <span class="math inline">\(V_2\)</span>.</p></li>
+<li><p>En efecto <span class="math display">\[\frac{d\left[B;F_i\right]}{d\left[B;\mathcal{L}_i\right]}=e\Longleftrightarrow \frac{a}{d\left[B;\mathcal{L}_i\right]}=e\]</span> además <span class="math inline">\(d\left[B_i;\mathcal{L}_i\right]=d\left[C;\mathcal{L}_i\right]\)</span> por lo tanto <span class="math inline">\(\frac{a}{d\left[C;\mathcal{L}_i\right]}=e\)</span>.</p></li>
+<li><p>Pues <span class="math display">\[\frac{d\left[P;F_1\right]}{d\left[P;\mathcal{L}_1\right]}=e\]</span> implica <span class="math inline">\(\frac{a-c}{\frac{a}{e}-a}=e\)</span> es decir <span class="math inline">\(c=ae\)</span>.</p></li>
+</ol>
+Por lo tanto
+</div>
+
+<p><span class="math inline">\(a&gt;b\)</span> y <span class="math inline">\(a^2=b^2+c^2\)</span>; pues <span class="math inline">\(a=d\left[B_1;F_2\right]=d\left[(0,b^2+c^2)&#39;;(c,0)&#39;\right]^2=\sqrt{b}\)</span>; <span class="math inline">\(0&lt;e&lt;1\)</span> debido a que <span class="math inline">\(0&lt;e=\frac{a}{e}&lt;1\)</span> y <span class="math inline">\(a&gt;c&gt;0\)</span>.</p>
 <p><span class="math inline">\(P=(x,y)=C+x&#39;\vec{u}+y&#39;\vec{u}^\perp\)</span>; <span class="math inline">\(x&#39;=[(x,y)-C]\vec{u}\)</span>; <span class="math inline">\(y&#39;=[(x,y)-C]\vec{u}^\perp\)</span></p>
 <p><span class="math inline">\(F_1=C+c\vec{u}\)</span> y <span class="math inline">\(F_2=C-c\vec{u}\)</span> entonces</p>
 <p><span class="math display">\[\begin{align*}
@@ -142,6 +166,23 @@ Figura 6.1: Elipse vectorial
 <p>De este modo <span class="math inline">\(P\in\mathcal{E}\)</span> si <span class="math inline">\(P\)</span> satisface la ecuación vectorial <span class="math display">\[P=(x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp;\: \text{donde } \frac{x&#39;^2}{a^2}+\frac{y&#39;^2}{b^2}=1; \:\left|\vec{u}\right|=1\]</span></p>
 <p>Cuando el eje es paralelo al eje <span class="math inline">\(x\)</span>; <span class="math inline">\(\vec{u}=i=(1,0)\)</span> entonces <span class="math inline">\((x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp=(h+x&#39;,k+y&#39;)\implies x&#39;=x-h\)</span> y <span class="math inline">\(y&#39;=y-k\)</span> en <span class="math inline">\(\frac{x&#39;^2}{a^2}+\frac{y&#39;^2}{b^2}=1\)</span> resulta <span class="math inline">\(\frac{(y-k)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\)</span> (<span class="math inline">\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)</span> si <span class="math inline">\(V\)</span> está en el origen); entonces <span class="math inline">\(F_1=C+c\vec{u}=(h+c,k)\)</span>; <span class="math inline">\(\mathcal{L}_1: x=h+\frac{a}{e}\)</span> y <span class="math inline">\(\mathcal{L}_2: x=h-\frac{a}{e}\)</span>.</p>
 <p>Cuando el eje es paralelo al eje <span class="math inline">\(y\)</span>; <span class="math inline">\(\vec{u}=j=(0,1)\)</span> entonces <span class="math inline">\((x,y)=V+x&#39;\vec{u}+y&#39;\vec{u}^\perp=(h-y&#39;,k+x&#39;)\implies x&#39;=y-k\)</span> y <span class="math inline">\(y&#39;=h-x\)</span> en <span class="math inline">\(\frac{x&#39;^2}{a^2}+\frac{y&#39;^2}{b^2}=1\)</span> resulta <span class="math inline">\(\frac{(y-k)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\)</span> (<span class="math inline">\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)</span> si <span class="math inline">\(V\)</span> está en el origen); entonces <span class="math inline">\(F_1=C+c\vec{u}=(h+c,k)\)</span>; <span class="math inline">\(\mathcal{L}_1: x=k+\frac{a}{e}\)</span> y <span class="math inline">\(\mathcal{L}_2: x=k-\frac{a}{e}\)</span>.</p>
+
+<div class="corollary">
+<span id="cor:unnamed-chunk-11" class="corollary"><strong>Corolario 6.1  </strong></span>The characteristic function of the sum of two independent random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> is the product of characteristic functions of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>, i.e.,
+<span class="math display">\[\varphi _{X_1+X_2}(t)=\varphi _{X_1}(t) \varphi _{X_2}(t)\]</span>
+</div>
+
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-12" class="exercise"><strong>Ejercicio 6.1  (Characteristic Function of the Sample Mean)  </strong></span>Let <span class="math inline">\(\bar{X}=\sum_{i=1}^n \frac{1}{n} X_i\)</span> be the sample mean of <span class="math inline">\(n\)</span> independent and identically distributed random variables, each with characteristic function <span class="math inline">\(\varphi_{X}.\)</span> Compute the characteristic function of <span class="math inline">\(\bar{X}\)</span>.
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solución. </em></span> Applying Theorem, we have
+<span class="math display">\[\varphi _{\bar{X}}(t)=\prod_{i=1}^n \varphi _{X_i}\left(\frac{t}{n}\right)=\left[\varphi _{X}\left(\frac{t}{n}\right)\right]^n.\]</span>
+</div>
+
 
 </div>
             </section>

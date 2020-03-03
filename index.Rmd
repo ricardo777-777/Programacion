@@ -20,6 +20,7 @@ El capitulo tratasobre _vectores_ y las operaciones en este conjunto
 
 ## Sitema de coordenadas cartesianas o rectangulares
 Este sitema esta compuesto por un palno y dos rectas mutuamente perpendiculares. A cada punto  $P$  se le asocia un paraordenado de numeros reales $P=(x,y)$ donde los números $x$ e $y$ estan ubicadas sobre los ejes $X$ e $Y$ respectivamente.
+
 * www
 * wwwww
 
