@@ -56,12 +56,6 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
 \usepackage[scaled=0.92]{helvet}
 
 \usepackage[skip=0pt]{caption}
@@ -201,28 +195,12 @@ facing=yes,capbesidesep=quad]{floatrow}
 \belowdisplayshortskip=0.5em plus 0.01em minus 0.01em
 }{}{}
 %%%%%%%%%%%%%%%%%%%%%
-% https://github.com/rstudio/rmarkdown/issues/337
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-% https://github.com/rstudio/rmarkdown/pull/252
-\usepackage{titling}
-\setlength{\droptitle}{-2em}
-
-\pretitle{\vspace{\droptitle}\centering\huge}
-\posttitle{\par}
-
-\preauthor{\centering\large\emph}
-\postauthor{\par}
-
-\predate{\centering\large\emph}
-\postdate{\par}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Geometría analítica}
 \author{MALLQUI BAÑOS Ricardo Michel}
-\date{2020-03-03}
+\date{2020-03-06}
 
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
